@@ -1,19 +1,6 @@
 "use client";
-
-import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
 
@@ -27,9 +14,7 @@ export function Contact() {
   const { handleSubmit, register } = useForm<FormInput>();
   // ...
 
-  const handleOnSumbit: SubmitHandler<FormInput> = (data) => {
-    console.log("Hemant", data);
-  };
+  const handleOnSumbit: SubmitHandler<FormInput> = (data) => {};
 
   return (
     <div>
@@ -37,7 +22,7 @@ export function Contact() {
         <p className="text-2xl">Let's Build Something Awesome Together! </p>
         <p className="text-5xl animate-bounce">🙋‍♂️</p>
       </div>
-      <div className="  shadow-lg shadow-indigo-500/50   mt-2 rounded-lg py-10 px-8 gap-3 w-[20rem] flex flex-col justify-center lg:w-[50rem]">
+      <div className=" w-full shadow-lg shadow-indigo-500/50   mt-2 rounded-lg py-10 px-8 gap-3 flex flex-col justify-center lg:w-[50rem]">
         <div>
           <label htmlFor="">Name</label>
           <Input

@@ -4,8 +4,8 @@ import myimg from "../public/my_ai_img-removebg-preview (1).png";
 import Image from "next/image";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import { FormProvider } from "react-hook-form";
 import { Contact } from "./Contact";
+import Social from "./Social";
 
 const Main = () => {
   const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
@@ -50,16 +50,16 @@ const Main = () => {
         <div>
           <div>
             <div className="flex items-center gap-5">
-              <p className="text-6xl ">
-                Hi! I Am <span className="text-blue-500">{displayText}|</span>
+              <p className="text-xl lg:text-6xl ">
+                Hi! I Am A <span className="text-blue-500">{displayText}|</span>
               </p>
             </div>
-            <p className="text-6xl mt-5">Hemant Prajapati</p>
+            <p className=" text-base lg:text-6xl mt-5 mb-5">Hemant Prajapati</p>
           </div>
         </div>
         <div>
           <Image
-            className="rounded-s-full shadow-inner "
+            className="rounded-t-full lg:rounded-s-full shadow-inner "
             src={myimg}
             alt="my-img"
             width={500}
@@ -78,6 +78,9 @@ const Main = () => {
       </div>
       <div className="flex flex-col justify-center items-center mt-30">
         <Contact />
+      </div>
+      <div>
+        <Social />
       </div>
     </>
   );

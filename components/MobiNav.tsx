@@ -1,21 +1,11 @@
 import React from "react";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "./ui/drawer";
-import { Button } from "./ui/button";
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import { CircleChevronLeft, SquareMenu } from "lucide-react";
 
 const MobiNav = () => {
   return (
     <div className="flex flex-col">
-      <Drawer direction="left">
+      <Drawer direction="right">
         <DrawerTrigger asChild>
           <SquareMenu size={32} />
         </DrawerTrigger>

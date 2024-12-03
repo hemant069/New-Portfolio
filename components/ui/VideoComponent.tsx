@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import ReactPlayer from "react-player";
 
-const VideoComponent = ({ isVideo }) => {
+const VideoComponent = ({ isVideo }: { isVideo: boolean }) => {
   const videoSource = "/video/react.mp4";
   return (
     <div className="border border-red-800">

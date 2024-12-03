@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Nav from "./Nav";
-import { Button } from "./ui/button";
 import MobiNav from "./MobiNav";
 
 const Header = () => {

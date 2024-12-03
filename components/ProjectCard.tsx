@@ -29,17 +29,29 @@ const ProjectCard = ({ data }: { data: Data }) => {
   const [isVideo, setisVideo] = useState(false);
   return (
     <>
-      <Card className="w-[370px] ">
+      <Card className=" shadow-lg shadow-indigo-500/50 lg:w-[370px]">
         <CardContent>
           {/* <Image width={350} height={250} alt={`${data.name} project image`} /> */}
-          <p className="text-center text-xl">{data.name}</p>
+          <p className="text-left text-xl">{data.name}</p>
           <p className="leading-normal">{data.description}</p>
-          <p className="text-sm text-slate-600">{data.tech}</p>
+          <div className="text-sm mt-1 w-full  grid grid-cols-3 gap-1 text-slate-600 ">
+            {data.tech.split(",").map((el, i) => (
+              <p
+                key={i}
+                className=" border text-center rounded-md shadow-sm shadow-cyan-500/50 "
+              >
+                {el}
+              </p>
+            ))}
+          </div>
           <div className="flex items-center justify-between mt-2">
             <Button>Live</Button>
             <Button>GitHub</Button>
             <Dialog>
-              <DialogTrigger onClick={() => setisVideo(true)}>
+              <DialogTrigger
+                className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
+                onClick={() => setisVideo(true)}
+              >
                 <p>Video</p>
               </DialogTrigger>
               <VideoComponent isVideo={isVideo} />

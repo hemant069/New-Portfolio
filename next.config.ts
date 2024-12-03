@@ -5,7 +5,7 @@ const nextConfig = {
     'react-remove-scroll',
     'vaul'
   ],
-  webpack: (config) => {
+  webpack: (config:any) => {
     config.resolve.extensionAlias = {
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
     };
