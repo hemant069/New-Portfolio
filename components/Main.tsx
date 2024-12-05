@@ -1,11 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import myimg from "../public/my_ai_img-removebg-preview (1).png";
 import Image from "next/image";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { Contact } from "./Contact";
 import Social from "./Social";
+import Header from "./Header";
 
 const Main = () => {
   const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
@@ -44,8 +45,27 @@ const Main = () => {
     return () => clearTimeout(timer);
   }, [displayText, currentSkillIndex, isDeleting, skills]);
 
+  const inputRef = useRef();
+
+  const ProjectScroll = () => {
+    inputRef.current?.scrollIntoView({
+      behavior: "smooth", // Smooth scrolling
+      block: "start", // Scroll to the top of the section
+    });
+  };
+
+  const Connect = () => {
+    inputRef.current?.scrollIntoView({
+      behavior: "smooth", // Smooth scrolling
+      block: "start", // Scroll to the top of the section
+    });
+  };
+
   return (
     <>
+      <div>
+        <Header Connect={Connect} ProjectScroll={ProjectScroll} />
+      </div>
       <div className="sm:flex items-center gap-10 px-5 justify-between ">
         <div className="w-[60rem]">
           <div>
@@ -76,10 +96,13 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="mt-20 sm:px-14">
+      <div ref={inputRef} className="mt-20 sm:px-14">
         <Projects />
       </div>
-      <div className="flex flex-col justify-center items-center mt-30">
+      <div
+        ref={inputRef}
+        className="flex flex-col justify-center items-center mt-30"
+      >
         <Contact />
       </div>
       <div className="flex justify-center mt-5">

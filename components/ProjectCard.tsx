@@ -35,9 +35,10 @@ const ProjectCard = ({ data }: { data: Data }) => {
             src={data.img}
             width={350}
             height={250}
+            className="mt-2 rounded-lg"
             alt={`${data.name} project image`}
           />
-          <p className="text-left text-xl">{data.name}</p>
+          <p className="text-left mt-2 text-xl">{data.name}</p>
           <p className="leading-normal h-[10rem]">{data.description}</p>
           <div className="text-sm mt-1 w-full  grid grid-cols-3 gap-1 text-slate-600 ">
             {data.tech.split(",").map((el, i) => (

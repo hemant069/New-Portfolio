@@ -16,10 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Jostfont} ${Jostfont} antialiased`}>
-        <Header />
-        {children}
-      </body>
+      <body className={`${Jostfont} ${Jostfont} antialiased`}>{children}</body>
     </html>
   );
 }
