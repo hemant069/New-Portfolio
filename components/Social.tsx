@@ -4,7 +4,7 @@ import React from "react";
 
 const Social = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 mb-10">
       <div>
         <Link href={"https://www.linkedin.com/in/hemant-prajapatii/"}>
           <Linkedin />

@@ -23,7 +23,7 @@ interface Data {
   tech: string;
   live_link: string;
   github_link: string;
-  img: string;
+  img: any;
 }
 const ProjectCard = ({ data }: { data: Data }) => {
   const [isVideo, setisVideo] = useState(false);
@@ -31,9 +31,14 @@ const ProjectCard = ({ data }: { data: Data }) => {
     <>
       <Card className=" shadow-lg shadow-indigo-500/50 lg:w-[370px]">
         <CardContent>
-          {/* <Image width={350} height={250} alt={`${data.name} project image`} /> */}
+          <Image
+            src={data.img}
+            width={350}
+            height={250}
+            alt={`${data.name} project image`}
+          />
           <p className="text-left text-xl">{data.name}</p>
-          <p className="leading-normal">{data.description}</p>
+          <p className="leading-normal h-[10rem]">{data.description}</p>
           <div className="text-sm mt-1 w-full  grid grid-cols-3 gap-1 text-slate-600 ">
             {data.tech.split(",").map((el, i) => (
               <p
@@ -44,10 +49,10 @@ const ProjectCard = ({ data }: { data: Data }) => {
               </p>
             ))}
           </div>
-          <div className="flex items-center justify-between mt-2">
+          <div className="flex items-center justify-between mt-8">
             <Button>Live</Button>
             <Button>GitHub</Button>
-            <Dialog>
+            {/* <Dialog>
               <DialogTrigger
                 className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
                 onClick={() => setisVideo(true)}
@@ -55,7 +60,7 @@ const ProjectCard = ({ data }: { data: Data }) => {
                 <p>Video</p>
               </DialogTrigger>
               <VideoComponent isVideo={isVideo} />
-            </Dialog>
+            </Dialog> */}
           </div>
         </CardContent>
       </Card>

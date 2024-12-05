@@ -1,16 +1,18 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-
+import instagram from "../public/Projects/instagram_donwloder.png";
+import frazzo from "../public/Projects/Frazzo.jpg";
+import baazaar from "../public/Projects/baazarcart.png";
 const ProjectDetails = [
   {
     id: 1,
-    name: "BaazCart",
+    name: "BaazarCart",
     description:
       "Bazaarcart is an e-commerce application that provides customers with a convenient and hassle-free shopping experience. At Bazaarcart, we offer a wide range of products including mobile devices, groceries, and clothes.",
     tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "",
-    github_link: "",
-    img: "",
+    live_link: "https://bazaarcart.vercel.app/",
+    github_link: "https://github.com/hemant069/Bazaar-Cart",
+    img: baazaar,
   },
   {
     id: 2,
@@ -18,29 +20,19 @@ const ProjectDetails = [
     description:
       "Frazzo Clone is a replica e-commerce platform that provides an intuitive user experience for online shopping, featuring a wide range of products and seamless navigation.",
     tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "",
-    github_link: "",
-    img: "",
-  },
-  {
-    id: 3,
-    name: "Portfolio",
-    description:
-      "A personal portfolio website showcasing my projects, skills, and experience in web development. Built with modern web technologies for a responsive and elegant design.",
-    tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "",
-    github_link: "",
-    img: "",
+    live_link: "https://frazzokefall.netlify.app/",
+    github_link: "https://github.com/hemant069/Frazzo-clone",
+    img: frazzo,
   },
   {
     id: 4,
-    name: "KrishaAi",
+    name: "Instagram Downloader",
     description:
-      "KrishaAI is an AI-powered platform offering smart solutions for personal and professional needs, designed to enhance productivity and user engagement.",
-    tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "",
-    github_link: "",
-    img: "",
+      "Instagram downloader is web application where user can download the reels just sharing the link of the reels",
+    tech: "Javascript, ReactJs, Tailwind,Redux, ExpressJs, MongoDB, Nodejs",
+    live_link: "https://instagram-downloader-fawn.vercel.app/",
+    github_link: "https://github.com/hemant069/instagram-downloader",
+    img: instagram,
   },
 ];
 
@@ -51,7 +43,7 @@ interface Project {
   tech: string;
   live_link: string;
   github_link: string;
-  img: string;
+  img: any;
 }
 
 const Projects = () => {

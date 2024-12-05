@@ -47,19 +47,22 @@ const Main = () => {
   return (
     <>
       <div className="sm:flex items-center gap-10 px-5 justify-between ">
-        <div>
+        <div className="w-[60rem]">
           <div>
             <div className="flex items-center gap-5">
-              <p className="text-xl lg:text-6xl ">
-                Hi! I Am A <span className="text-blue-500">{displayText}|</span>
+              <p className="text-xl lg:text-6xl  ">
+                Hi! I Am A{" "}
+                <span className="text-blue-500 ">{displayText}|</span>
               </p>
             </div>
-            <p className=" text-base lg:text-6xl mt-5 mb-5">Hemant Prajapati</p>
+            <p className=" hidden lg:block text-base lg:text-6xl mt-5 mb-5">
+              Hemant Prajapati
+            </p>
           </div>
         </div>
-        <div>
+        <div className="mt-10 lg:mt-0">
           <Image
-            className="rounded-t-full lg:rounded-s-full shadow-inner "
+            className="rounded-t-full md:rounded-s-full shadow-inner "
             src={myimg}
             alt="my-img"
             width={500}
@@ -79,7 +82,7 @@ const Main = () => {
       <div className="flex flex-col justify-center items-center mt-30">
         <Contact />
       </div>
-      <div>
+      <div className="flex justify-center mt-5">
         <Social />
       </div>
     </>
