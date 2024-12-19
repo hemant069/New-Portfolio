@@ -15,6 +15,7 @@ import Eg from "../public/my_ai_img-removebg-preview (1).png";
 import ReactPlayer from "react-player";
 import VideoComponent from "./ui/VideoComponent";
 import { Dialog, DialogTrigger } from "./ui/dialog";
+import Link from "next/link";
 
 interface Data {
   id: number;
@@ -51,8 +52,12 @@ const ProjectCard = ({ data }: { data: Data }) => {
             ))}
           </div>
           <div className="flex items-center justify-between mt-8">
-            <Button>Live</Button>
-            <Button>GitHub</Button>
+            <Button>
+              <Link href={data.live_link}>Live</Link>
+            </Button>
+            <Button>
+              <Link href={data.github_link}>GitHub</Link>
+            </Button>
             {/* <Dialog>
               <DialogTrigger
                 className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
