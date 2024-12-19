@@ -26,7 +26,7 @@ export function Contact() {
         <div>
           <label htmlFor="">Name</label>
           <Input
-            className="hover:border-red-600 placeholder:animate-bounce"
+            className="hover:border-red-600 "
             placeholder="What's Your Name, Superstar?"
             {...register("name")}
           />
@@ -34,6 +34,7 @@ export function Contact() {
         <div>
           <label htmlFor="">Email</label>
           <Input
+            className="hover:border-blue-600 "
             placeholder="How Can I Reach You ? (Email or Magic Signal)"
             {...register("email")}
           />
@@ -41,6 +42,7 @@ export function Contact() {
         <div>
           <label htmlFor="">Message</label>
           <Textarea
+            className="hover:border-green-600 "
             placeholder="P.S. I respond faster than a caffeine-fueled coder on deadline!"
             {...register("message")}
           />

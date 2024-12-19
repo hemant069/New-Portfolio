@@ -23,7 +23,10 @@ const Header = ({ Connect, ProjectScroll }) => {
           <Nav Connect={Connect} ProjectScroll={ProjectScroll} />
           <Link href={"/"}>
             <div className="border border-red-800 hover:bg-red-700 hover:transition hover:scale-110 delay-300 duration-300 ease-in-out py-1 px-6">
-              Hire Me
+              <Link href={"https://www.linkedin.com/in/hemant-prajapatii/"}>
+                {" "}
+                Hire Me
+              </Link>
             </div>
           </Link>
         </div>

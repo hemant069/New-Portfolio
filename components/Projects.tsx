@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import instagram from "../public/Projects/instagram_donwloder.png";
 import frazzo from "../public/Projects/Frazzo.jpg";
 import baazaar from "../public/Projects/baazarcart.png";
+import gitcard from "../public/Projects/gitcard.png";
 const ProjectDetails = [
   {
     id: 1,
@@ -20,9 +21,9 @@ const ProjectDetails = [
     description:
       "A Product where you can donwload your Git Profile card which you can share with the social media like twitter, instagram, linkdin and many more places to showcase you skill and knowledge",
     tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "https://bazaarcart.vercel.app/",
-    github_link: "https://github.com/hemant069/Bazaar-Cart",
-    img: baazaar,
+    live_link: "https://gitusercard.vercel.app/",
+    github_link: "#",
+    img: gitcard,
   },
   {
     id: 2,
