@@ -10,20 +10,23 @@ import {
 } from "@/components/ui/dialog";
 import ReactPlayer from "react-player";
 
-const VideoComponent = ({ isVideo }: { isVideo: boolean }) => {
+const VideoComponent = ({
+  isVideo,
+  video,
+}: {
+  isVideo: boolean;
+  video: any;
+}) => {
   const videoSource = "/video/react.mp4";
   return (
     <div className="border border-red-800">
-      {/* <Dialog> */}
-      {/* <DialogTrigger>Open</DialogTrigger> */}
-      <DialogContent className="border border-red-900">
-        <div className="flex justify-center items-center">
+      <DialogContent className="border border-red-900 bg-black">
+        <div className="flex justify-center items-center ">
           {isVideo && (
-            <ReactPlayer url={videoSource} controls width={"400px"} />
+            <ReactPlayer playing url={video} controls width={"400px"} />
           )}
         </div>
       </DialogContent>
-      {/* </Dialog> */}
     </div>
   );
 };

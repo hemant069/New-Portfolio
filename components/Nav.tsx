@@ -3,6 +3,9 @@ type ChildComponentProps = {
   Connect: () => void;
   ProjectScroll: () => void;
 };
+type handleresume = {
+  handleResume: () => void;
+};
 const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
   const Addnav = [
     {
@@ -15,6 +18,10 @@ const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
       name: "Connect with Me :)",
     },
   ];
+  const handleResume = (): void => {
+    window.location.href =
+      "https://drive.google.com/file/d/1-_jmtYaXVYKAyEKoQSmhLvoiU4kjqBTx/view?usp=drive_link";
+  };
   return (
     <div className="flex items-center gap-8">
       {Addnav.map((el, i) => (
@@ -25,7 +32,9 @@ const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
               ? ProjectScroll
               : el.name === "Connect with Me :)"
               ? Connect
-              : () => console.log("Nothing")
+              : el.name === "Resume"
+              ? handleResume
+              : () => console.log("Noting")
           }
           key={"manu" + i}
         >

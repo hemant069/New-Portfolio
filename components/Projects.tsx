@@ -4,6 +4,10 @@ import instagram from "../public/Projects/instagram_donwloder.png";
 import frazzo from "../public/Projects/Frazzo.jpg";
 import baazaar from "../public/Projects/baazarcart.png";
 import gitcard from "../public/Projects/gitcard.png";
+// import baazarvideo from "video/baazarCart.mp4";
+// import instagramvideo from "video/instagram.mp4";
+const baazarvideo = "video/baazarCart.mp4";
+const instagramvideo = "video/instagram.mp4";
 const ProjectDetails = [
   {
     id: 1,
@@ -14,6 +18,7 @@ const ProjectDetails = [
     live_link: "https://bazaarcart.vercel.app/",
     github_link: "https://github.com/hemant069/Bazaar-Cart",
     img: baazaar,
+    video: baazarvideo,
   },
   {
     id: 3,
@@ -44,6 +49,7 @@ const ProjectDetails = [
     live_link: "https://instagram-downloader-fawn.vercel.app/",
     github_link: "https://github.com/hemant069/instagram-downloader",
     img: instagram,
+    video: instagramvideo,
   },
 ];
 
@@ -55,6 +61,7 @@ interface Project {
   live_link: string;
   github_link: string;
   img: any;
+  video?: any;
 }
 
 const Projects = () => {

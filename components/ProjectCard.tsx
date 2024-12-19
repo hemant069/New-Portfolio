@@ -25,6 +25,7 @@ interface Data {
   live_link: string;
   github_link: string;
   img: any;
+  video?: any;
 }
 const ProjectCard = ({ data }: { data: Data }) => {
   const [isVideo, setisVideo] = useState(false);
@@ -58,15 +59,17 @@ const ProjectCard = ({ data }: { data: Data }) => {
             <Button>
               <Link href={data.github_link}>GitHub</Link>
             </Button>
-            {/* <Dialog>
-              <DialogTrigger
-                className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
-                onClick={() => setisVideo(true)}
-              >
-                <p>Video</p>
-              </DialogTrigger>
-              <VideoComponent isVideo={isVideo} />
-            </Dialog> */}
+            {!data.video ? null : (
+              <Dialog>
+                <DialogTrigger
+                  className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
+                  onClick={() => setisVideo(true)}
+                >
+                  <p>Video</p>
+                </DialogTrigger>
+                <VideoComponent isVideo={isVideo} video={data.video} />
+              </Dialog>
+            )}
           </div>
         </CardContent>
       </Card>
