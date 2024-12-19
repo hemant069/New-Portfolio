@@ -67,8 +67,8 @@ const Main = () => {
       <div>
         <Header Connect={Connect} ProjectScroll={ProjectScroll} />
       </div>
-      <div className="sm:flex items-center gap-10 px-5 justify-between ">
-        <div className="w-[60rem]">
+      <div className="md:flex items-center gap-10 px-5 justify-between ">
+        <div className="sm:w-[60rem]">
           <div>
             <div className="flex items-center gap-5">
               <p className="text-xl lg:text-6xl  ">
