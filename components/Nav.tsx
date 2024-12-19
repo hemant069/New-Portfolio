@@ -1,6 +1,9 @@
 import React from "react";
-
-const Nav = ({ ProjectScroll, Connect }) => {
+type ChildComponentProps = {
+  Connect: () => void;
+  ProjectScroll: () => void;
+};
+const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
   const Addnav = [
     {
       name: "Resume",

@@ -45,8 +45,8 @@ const Main = () => {
     return () => clearTimeout(timer);
   }, [displayText, currentSkillIndex, isDeleting, skills]);
 
-  const inputRef = useRef();
-  const inputRef1 = useRef();
+  const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef1 = useRef<HTMLDivElement>(null);
 
   const ProjectScroll = () => {
     inputRef.current?.scrollIntoView({

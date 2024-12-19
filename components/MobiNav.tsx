@@ -12,11 +12,9 @@ const MobiNav = () => {
         <DrawerContent className="h-full w-[20rem] left-0">
           <div className="p-4 text-black">
             <div className="flex flex-col items-center  justify-between">
-              <div>Home</div>
               <div>Resume</div>
               <div>Project</div>
-              <div>Service</div>
-              <div>About</div>
+              <div>Connect with Me :)</div>
               <DrawerClose asChild>
                 <CircleChevronLeft />
               </DrawerClose>

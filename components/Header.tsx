@@ -1,10 +1,14 @@
 "use client";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import Nav from "./Nav";
 import MobiNav from "./MobiNav";
 
-const Header = ({ Connect, ProjectScroll }) => {
+type ChildComponentProps = {
+  Connect: () => void;
+  ProjectScroll: () => void;
+};
+const Header: React.FC<ChildComponentProps> = ({ Connect, ProjectScroll }) => {
   return (
     <div
       className="py-8 xl:py-12 xl:px-4
