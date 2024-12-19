@@ -41,7 +41,7 @@ const ProjectCard = ({ data }: { data: Data }) => {
           <p className="text-left mt-2 text-xl">{data.name}</p>
           <p className="leading-normal h-[10rem]">{data.description}</p>
           <div className="text-sm mt-1 w-full  grid grid-cols-3 gap-1 text-slate-600 ">
-            {data.tech.split(",").map((el, i) => (
+            {data?.tech?.split(",").map((el, i) => (
               <p
                 key={i}
                 className=" border text-center rounded-md shadow-sm shadow-cyan-500/50 "

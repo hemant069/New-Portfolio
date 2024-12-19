@@ -15,6 +15,16 @@ const ProjectDetails = [
     img: baazaar,
   },
   {
+    id: 3,
+    name: "GitCard",
+    description:
+      "A Product where you can donwload your Git Profile card which you can share with the social media like twitter, instagram, linkdin and many more places to showcase you skill and knowledge",
+    tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
+    live_link: "https://bazaarcart.vercel.app/",
+    github_link: "https://github.com/hemant069/Bazaar-Cart",
+    img: baazaar,
+  },
+  {
     id: 2,
     name: "Frazzo Clone",
     description:

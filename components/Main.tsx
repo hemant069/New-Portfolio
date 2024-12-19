@@ -46,6 +46,7 @@ const Main = () => {
   }, [displayText, currentSkillIndex, isDeleting, skills]);
 
   const inputRef = useRef();
+  const inputRef1 = useRef();
 
   const ProjectScroll = () => {
     inputRef.current?.scrollIntoView({
@@ -55,7 +56,7 @@ const Main = () => {
   };
 
   const Connect = () => {
-    inputRef.current?.scrollIntoView({
+    inputRef1.current?.scrollIntoView({
       behavior: "smooth", // Smooth scrolling
       block: "start", // Scroll to the top of the section
     });
@@ -71,7 +72,7 @@ const Main = () => {
           <div>
             <div className="flex items-center gap-5">
               <p className="text-xl lg:text-6xl  ">
-                Hi! I Am A{" "}
+                Hi! I am a{" "}
                 <span className="text-blue-500 ">{displayText}|</span>
               </p>
             </div>
@@ -82,7 +83,7 @@ const Main = () => {
         </div>
         <div className="mt-10 lg:mt-0">
           <Image
-            className="rounded-t-full md:rounded-s-full shadow-inner "
+            className="rounded-full md:rounded-s-full shadow-inner "
             src={myimg}
             alt="my-img"
             width={500}
@@ -100,7 +101,7 @@ const Main = () => {
         <Projects />
       </div>
       <div
-        ref={inputRef}
+        ref={inputRef1}
         className="flex flex-col justify-center items-center mt-30"
       >
         <Contact />
