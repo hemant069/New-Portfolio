@@ -16,6 +16,7 @@ export default function Home() {
         className=" sticky top-0 left-0 right-0 h-1 bg-red-700 origin-left"
         style={{ scaleX }}
       />
+
       <Main />
     </div>
   );

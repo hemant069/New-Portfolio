@@ -67,7 +67,7 @@ interface Project {
 const Projects = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold text-center mb-6">My Projects</h2>
+      <h2 className="text-2xl font-light  text-center mb-6">My Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {ProjectDetails.map((el: Project, index: number) => (
           <ProjectCard data={el} key={index} />

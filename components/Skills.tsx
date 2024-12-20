@@ -57,7 +57,7 @@ const Skills = () => {
                 key={index}
                 className="basis-1/2 sm:basis-1/4 lg:basis-1/6 flex-shrink-0"
               >
-                <Card className="h-full hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg">
+                <Card className="h-full hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-lg">
                   <CardContent className="flex items-center justify-center p-6 h-full">
                     <div className="flex flex-col items-center justify-center gap-4 w-full">
                       <div className="w-16 h-16 flex items-center justify-center">

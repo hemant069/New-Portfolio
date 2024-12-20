@@ -31,8 +31,8 @@ const ProjectCard = ({ data }: { data: Data }) => {
   const [isVideo, setisVideo] = useState(false);
   return (
     <>
-      <Card className=" shadow-lg shadow-indigo-500/50 lg:w-[370px]">
-        <CardContent>
+      <Card className=" hover:scale-105 ease-in-out duration-150 cursor-pointer shadow-lg shadow-indigo-500/50 lg:w-[370px]">
+        <CardContent className="">
           <Image
             src={data.img}
             width={350}
