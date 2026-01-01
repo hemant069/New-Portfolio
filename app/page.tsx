@@ -11,13 +11,15 @@ export default function Home() {
   });
 
   return (
-    <div>
-      <motion.div
-        className=" sticky top-0 left-0 right-0 h-1 bg-red-700 origin-left"
-        style={{ scaleX }}
-      />
+    <div className="max-w-4xl mx-auto animate-fade-in-blur ">
+      <div className="flex flex-col justify-center items-center">
+        <motion.div
+          className=" sticky top-0 left-0 right-0 h-1 bg-red-700 origin-left"
+          style={{ scaleX }}
+        />
 
-      <Main />
+        <Main />
+      </div>
     </div>
   );
 }

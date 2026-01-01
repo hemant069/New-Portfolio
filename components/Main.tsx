@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import myimg from "../public/my_ai_img-removebg-preview (1).png";
 import Image from "next/image";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { Contact } from "./Contact";
 import Social from "./Social";
 import Header from "./Header";
+import Hero from "./Hero";
 
 const Main = () => {
   const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
@@ -67,28 +67,8 @@ const Main = () => {
       <div>
         <Header Connect={Connect} ProjectScroll={ProjectScroll} />
       </div>
-      <div className="md:flex items-center gap-10 px-5 justify-between ">
-        <div className="sm:w-[60rem]">
-          <div>
-            <div className="flex items-center gap-5">
-              <p className="text-xl lg:text-6xl  ">
-                Hi! I am a{" "}
-                <span className="text-blue-500 ">{displayText}|</span>
-              </p>
-            </div>
-            <p className=" hidden lg:block text-base lg:text-6xl mt-5 mb-5">
-              Hemant Prajapati
-            </p>
-          </div>
-        </div>
-        <div className="mt-10 lg:mt-0">
-          <Image
-            className="rounded-full md:rounded-s-full shadow-inner "
-            src={myimg}
-            alt="my-img"
-            width={500}
-          />
-        </div>
+      <div>
+        <Hero />
       </div>
       <div>
         <h2 className="text-2xl font-bold text-center mb-6"></h2>

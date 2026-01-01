@@ -15,7 +15,7 @@ const Header: React.FC<ChildComponentProps> = ({ Connect, ProjectScroll }) => {
     "
     >
       <div className="flex justify-between items-center">
-        <Link href={"/"}>
+        <Link href={"#"}>
           <p className="text-4xl ">
             Hemant{" "}
             <span className="text-accent text-red-900 rounded-lg">.</span>
@@ -25,14 +25,14 @@ const Header: React.FC<ChildComponentProps> = ({ Connect, ProjectScroll }) => {
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav Connect={Connect} ProjectScroll={ProjectScroll} />
-          <Link href={"/"}>
+          <div>
             <div className="border border-red-800 hover:bg-red-700 hover:transition hover:scale-110 delay-300 duration-300 ease-in-out py-1 px-6">
               <Link href={"https://www.linkedin.com/in/hemant-prajapatii/"}>
                 {" "}
                 Hire Me
               </Link>
             </div>
-          </Link>
+          </div>
         </div>
 
         {/* Mobile Nav */}

@@ -5,12 +5,14 @@ const nextConfig = {
     'react-remove-scroll',
     'vaul'
   ],
+  
   webpack: (config:any) => {
     config.resolve.extensionAlias = {
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
     };
     return config;
   },
+  turbopack:{},
 };
 
 module.exports = nextConfig;
