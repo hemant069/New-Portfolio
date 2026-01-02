@@ -4,6 +4,7 @@ import myimg from "../public/my_ai_img-removebg-preview (1).png";
 import mountain from "../public/mountain-.png";
 
 const Hero = () => {
+    // today not changes
     return (
         <div>
             <div className="md:flex items-center gap-10 px-5 justify-between ">
