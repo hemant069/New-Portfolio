@@ -64,17 +64,17 @@ const Main = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <Header Connect={Connect} ProjectScroll={ProjectScroll} />
-      </div>
+      </div> */}
       <div>
         <Hero />
       </div>
       <div>
         <h2 className="text-2xl font-bold text-center mb-6"></h2>
-        <div className="flex justify-center mt-20">
+        {/* <div className="flex justify-center mt-20">
           <Skills />
-        </div>
+        </div> */}
       </div>
 
       <div ref={inputRef} className="mt-20 sm:px-14">
