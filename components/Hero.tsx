@@ -5,7 +5,7 @@ import mountain from "../public/mountain-.png";
 import moon from "../public/moon.jpg";
 
 const Hero = () => {
-    // today not changes
+
     return (
         <div>
             <div className="md:flex items-center gap-10 px-5 justify-between ">
