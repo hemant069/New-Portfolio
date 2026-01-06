@@ -74,8 +74,14 @@ const Main = () => {
       <div>
         <WorkExperience />
       </div>
-      <div ref={inputRef} className="mt-20 sm:px-14">
+      <div ref={inputRef} className="">
         <Projects />
+      </div>
+      <div
+        ref={inputRef1}
+        className=""
+      >
+        <Contact />
       </div>
       {/* <div>
         <h2 className="text-2xl font-bold text-center mb-6"></h2>
@@ -87,12 +93,7 @@ const Main = () => {
       <div ref={inputRef} className="mt-20 sm:px-14">
         <Projects />
       </div>
-      <div
-        ref={inputRef1}
-        className="flex flex-col justify-center items-center mt-30"
-      >
-        <Contact />
-      </div>
+     
       <div className="flex justify-center mt-5">
         <Social />
       </div> */}

@@ -6,7 +6,7 @@ const WorkExperience = () => {
         <div className='w-full'>
 
             <div className=' text-start'>
-                <h3 className='text-md text-gray-500 '>Featured</h3>
+                <h3 className='text-md text-gray-500 mt-2 '>Featured</h3>
                 <h1 className='text-xl'>Work Experience</h1>
             </div>
             <div>

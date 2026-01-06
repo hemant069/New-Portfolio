@@ -16,33 +16,50 @@ import ReactPlayer from "react-player";
 import VideoComponent from "./ui/VideoComponent";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 import Link from "next/link";
+import { projectTypes } from "@/types/projectTypes";
+import { Github, Globe, Play } from "lucide-react";
 
-interface Data {
-  id: number;
-  name: string;
-  description: string;
-  tech: string;
-  live_link: string;
-  github_link: string;
-  img: any;
-  video?: any;
-}
-const ProjectCard = ({ data }: { data: Data }) => {
+const ProjectCard = ({ data }: { data: projectTypes }) => {
   const [isVideo, setisVideo] = useState(false);
   return (
     <>
-      <Card className=" hover:scale-105 ease-in-out duration-150 cursor-pointer shadow-lg shadow-indigo-500/50 lg:w-[370px]">
-        <CardContent className="">
+      <Card className="m-auto hover:scale-105 ease-in-out duration-150 cursor-pointer shadow-lg   ">
+        <CardContent className="w-[18rem] h-[26rem] p-2 rounded-lg m-auto">
           <Image
             src={data.img}
             width={350}
             height={250}
-            className="mt-2 rounded-lg"
+            className="w-full rounded-lg object-cover "
             alt={`${data.name} project image`}
           />
-          <p className="text-left mt-2 text-xl">{data.name}</p>
-          <p className="leading-normal h-[10rem]">{data.description}</p>
-          <div className="text-sm mt-1 w-full  grid grid-cols-3 gap-1 text-slate-600 ">
+          <div className="flex  w-full items-center justify-between">
+            <p className="">{data.name}</p>
+            <div className="flex items-center justify-between gap-2 ">
+
+              <Link href={data.live_link}>
+                <Globe />
+              </Link>
+
+
+              <Link href={data.github_link}>
+                <Github />
+              </Link>
+
+              {!data.video ? null : (
+                <Dialog>
+                  <DialogTrigger
+                    className=""
+                    onClick={() => setisVideo(true)}
+                  >
+                    <Play />
+                  </DialogTrigger>
+                  <VideoComponent isVideo={isVideo} video={data.video} />
+                </Dialog>
+              )}
+            </div>
+          </div>
+          <p className="text-start text-sm text-gray-500 ">{data.description}</p>
+          <div className="text-sm mt-2 w-full  grid grid-cols-3 gap-1 text-gray-500 ">
             {data?.tech?.split(",").map((el, i) => (
               <p
                 key={i}
@@ -52,25 +69,7 @@ const ProjectCard = ({ data }: { data: Data }) => {
               </p>
             ))}
           </div>
-          <div className="flex items-center justify-between mt-8">
-            <Button>
-              <Link href={data.live_link}>Live</Link>
-            </Button>
-            <Button>
-              <Link href={data.github_link}>GitHub</Link>
-            </Button>
-            {!data.video ? null : (
-              <Dialog>
-                <DialogTrigger
-                  className="border px-5 bg-[#18181a] py-0.5 text-white rounded-md"
-                  onClick={() => setisVideo(true)}
-                >
-                  <p>Video</p>
-                </DialogTrigger>
-                <VideoComponent isVideo={isVideo} video={data.video} />
-              </Dialog>
-            )}
-          </div>
+
         </CardContent>
       </Card>
     </>

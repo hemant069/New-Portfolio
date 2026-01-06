@@ -3,6 +3,15 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
+import Image from "next/image";
+import Link from "next/link";
+import { socialLinks } from "@/data/socialLinks";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface FormInput {
   name: string;
@@ -12,9 +21,7 @@ interface FormInput {
 
 export function Contact() {
   const { handleSubmit, register } = useForm<FormInput>();
-  // ...
-
-  const handleOnSumbit: SubmitHandler<FormInput> = (data) => {};
+  const handleOnSumbit: SubmitHandler<FormInput> = (data) => { };
 
   return (
     <div>
@@ -22,38 +29,48 @@ export function Contact() {
         <p className="text-2xl">Let's Build Something Awesome Together! </p>
         <p className="text-5xl animate-bounce">🙋‍♂️</p>
       </div>
-      <div className=" w-full shadow-lg shadow-indigo-500/50   mt-2 rounded-lg py-10 px-8 gap-3 flex flex-col justify-center lg:w-[50rem]">
-        <div>
-          <label htmlFor="">Name</label>
-          <Input
-            className="hover:border-red-600 "
-            placeholder="What's Your Name, Superstar?"
-            {...register("name")}
-          />
-        </div>
-        <div>
-          <label htmlFor="">Email</label>
-          <Input
-            className="hover:border-blue-600 "
-            placeholder="How Can I Reach You ? (Email or Magic Signal)"
-            {...register("email")}
-          />
-        </div>
-        <div>
-          <label htmlFor="">Message</label>
-          <Textarea
-            className="hover:border-green-600 "
-            placeholder="P.S. I respond faster than a caffeine-fueled coder on deadline!"
-            {...register("message")}
-          />
-        </div>
-        <Button
-          className="hover:bg-red-700 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300"
-          onClick={handleSubmit(handleOnSumbit)}
-        >
-          Submit
-        </Button>
+
+      <div className="mt-4">
+        <p className="text-sm text-gray-400">Find me on these platforms</p>
       </div>
+
+      {/* Social list with hover previews */}
+      <div className="mt-3 flex flex-wrap gap-4">
+        <TooltipProvider delayDuration={0}>
+          {socialLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Tooltip key={link.href}>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-md border border-border px-3 py-2 hover:bg-accent/40 transition-colors"
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="text-sm">{link.label}</span>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent className="flex flex-col items-center gap-2">
+                  <Image
+                    src={link.previewImg}
+                    alt={`${link.label} preview`}
+                    width={120}
+                    height={120}
+                    className="rounded-md object-cover"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    {link.label} profile preview
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            );
+          })}
+        </TooltipProvider>
+      </div>
+
+      {/* your form (still commented) ... */}
     </div>
   );
 }
