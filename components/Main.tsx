@@ -7,6 +7,7 @@ import { Contact } from "./Contact";
 import Social from "./Social";
 import Header from "./Header";
 import Hero from "./Hero";
+import WorkExperience from "./WorkExperience";
 
 const Main = () => {
   const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
@@ -71,10 +72,16 @@ const Main = () => {
         <Hero />
       </div>
       <div>
+        <WorkExperience />
+      </div>
+      <div ref={inputRef} className="mt-20 sm:px-14">
+        <Projects />
+      </div>
+      {/* <div>
         <h2 className="text-2xl font-bold text-center mb-6"></h2>
-        {/* <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-20">
           <Skills />
-        </div> */}
+        </div>
       </div>
 
       <div ref={inputRef} className="mt-20 sm:px-14">
@@ -88,7 +95,7 @@ const Main = () => {
       </div>
       <div className="flex justify-center mt-5">
         <Social />
-      </div>
+      </div> */}
     </>
   );
 };

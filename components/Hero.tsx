@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/tooltip"
 import { Button } from './ui/button';
 import { Github } from 'lucide-react';
-import { socialLinks } from '@/lib/socialLinks';
+import { socialLinks } from '@/data/socialLinks';
 import Link from 'next/link';
 import { SocialLink } from '@/types/socialTypes';
 
@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="md:flex items-center gap-10 px-5 justify-between ">
                 <div className='relative w-full h-[20rem]  '>
                     <Image
-                        className='w-[40rem] h-[20rem] object-cover'
+                        className='w-full h-[20rem] object-cover'
                         src={moon}
                         width={1920}  // Use a high-resolution source
                         height={320}  // Maintain aspect ratio
@@ -38,7 +38,7 @@ const Hero = () => {
             <div className='flex items-center justify-between '>
                 <div className='mt-12 text-start'>
                     <h1 className='text-2xl italic font-bold '>Hemant Prajapati</h1>
-                    <p className='text-sm text-gray-500'>Engineer | Software Developer</p>
+                    <p className='text-xs text-gray-500'>Engineer | Software Developer</p>
                 </div>
                 <div className='flex items-center gap-3 justify-center z-50 '>
                     <TooltipProvider delayDuration={0.95}>
@@ -66,7 +66,7 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='text-start max-w-2xl  text-gray-500'>
+            <div className='text-start  mt-4  text-gray-500'>
                 <p className=''>I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences, I work across the entire development lifecycle. From UI/UX to deployment to user feedback, I care less about technology debates and more about delivering results that people love using.</p>
             </div>
         </div>
