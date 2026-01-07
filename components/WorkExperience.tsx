@@ -11,7 +11,7 @@ const WorkExperience = () => {
             </div>
             <div>
                 {
-                    companies.map((item, index) => <div key={item.description}>
+                    companies.map((item, index) => <div key={index}>
                         <div className='flex justify-between'>
                             <div>
                                 <h1>{item.name}</h1>

@@ -1,3 +1,5 @@
+import { companiesTypes } from "@/types/companiesTypes";
+
 export const companies: companiesTypes[] = [
   {
     name: "Baaz",

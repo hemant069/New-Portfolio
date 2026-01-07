@@ -10,58 +10,58 @@ import Hero from "./Hero";
 import WorkExperience from "./WorkExperience";
 
 const Main = () => {
-  const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
-  const [displayText, setDisplayText] = useState("");
-  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  // const skills = ["App Developer", "Software Engineer", "Full Stack Developer"];
+  // const [displayText, setDisplayText] = useState("");
+  // const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
+  // const [isDeleting, setIsDeleting] = useState(false);
 
-  useEffect(() => {
-    const handleTyping = () => {
-      const currentSkill = skills[currentSkillIndex];
+  // useEffect(() => {
+  //   const handleTyping = () => {
+  //     const currentSkill = skills[currentSkillIndex];
 
-      // Typing logic
-      if (!isDeleting && displayText.length < currentSkill.length) {
-        setDisplayText(currentSkill.slice(0, displayText.length + 1));
-      }
+  //     // Typing logic
+  //     if (!isDeleting && displayText.length < currentSkill.length) {
+  //       setDisplayText(currentSkill.slice(0, displayText.length + 1));
+  //     }
 
-      // Deleting logic
-      if (isDeleting && displayText.length > 0) {
-        setDisplayText(currentSkill.slice(0, displayText.length - 1));
-      }
+  //     // Deleting logic
+  //     if (isDeleting && displayText.length > 0) {
+  //       setDisplayText(currentSkill.slice(0, displayText.length - 1));
+  //     }
 
-      // Switch between typing and deleting
-      if (!isDeleting && displayText === currentSkill) {
-        setTimeout(() => setIsDeleting(true), 1500);
-      }
+  //     // Switch between typing and deleting
+  //     if (!isDeleting && displayText === currentSkill) {
+  //       setTimeout(() => setIsDeleting(true), 1500);
+  //     }
 
-      if (isDeleting && displayText === "") {
-        setIsDeleting(false);
-        setCurrentSkillIndex((prev) => (prev + 1) % skills.length);
-      }
-    };
+  //     if (isDeleting && displayText === "") {
+  //       setIsDeleting(false);
+  //       setCurrentSkillIndex((prev) => (prev + 1) % skills.length);
+  //     }
+  //   };
 
-    const typingSpeed = isDeleting ? 50 : 100;
-    const timer = setTimeout(handleTyping, typingSpeed);
+  //   const typingSpeed = isDeleting ? 50 : 100;
+  //   const timer = setTimeout(handleTyping, typingSpeed);
 
-    return () => clearTimeout(timer);
-  }, [displayText, currentSkillIndex, isDeleting, skills]);
+  //   return () => clearTimeout(timer);
+  // }, [displayText, currentSkillIndex, isDeleting, skills]);
 
-  const inputRef = useRef<HTMLDivElement>(null);
-  const inputRef1 = useRef<HTMLDivElement>(null);
+  // const inputRef = useRef<HTMLDivElement>(null);
+  // const inputRef1 = useRef<HTMLDivElement>(null);
 
-  const ProjectScroll = () => {
-    inputRef.current?.scrollIntoView({
-      behavior: "smooth", // Smooth scrolling
-      block: "start", // Scroll to the top of the section
-    });
-  };
+  // const ProjectScroll = () => {
+  //   inputRef.current?.scrollIntoView({
+  //     behavior: "smooth", // Smooth scrolling
+  //     block: "start", // Scroll to the top of the section
+  //   });
+  // };
 
-  const Connect = () => {
-    inputRef1.current?.scrollIntoView({
-      behavior: "smooth", // Smooth scrolling
-      block: "start", // Scroll to the top of the section
-    });
-  };
+  // const Connect = () => {
+  //   inputRef1.current?.scrollIntoView({
+  //     behavior: "smooth", // Smooth scrolling
+  //     block: "start", // Scroll to the top of the section
+  //   });
+  // };
 
   return (
     <>
@@ -74,14 +74,17 @@ const Main = () => {
       <div>
         <WorkExperience />
       </div>
-      <div ref={inputRef} className="">
+      <div className="">
         <Projects />
       </div>
       <div
-        ref={inputRef1}
+
         className=""
       >
         <Contact />
+      </div>
+      <div>
+
       </div>
       {/* <div>
         <h2 className="text-2xl font-bold text-center mb-6"></h2>

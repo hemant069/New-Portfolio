@@ -26,7 +26,7 @@ export function Contact() {
   return (
     <div>
       <div className="flex items-center">
-        <p className="text-2xl">Let's Build Something Awesome Together! </p>
+        <p className="text-xl">Let's Build Something Awesome Together! </p>
         <p className="text-5xl animate-bounce">🙋‍♂️</p>
       </div>
 
@@ -56,8 +56,8 @@ export function Contact() {
                   <Image
                     src={link.previewImg}
                     alt={`${link.label} preview`}
-                    width={120}
-                    height={120}
+                    width={250}
+                    height={250}
                     className="rounded-md object-cover"
                   />
                   <p className="text-xs text-muted-foreground">

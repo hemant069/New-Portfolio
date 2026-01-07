@@ -1,8 +1,8 @@
 import { SocialLink } from "@/types/socialTypes";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import githubPreview from "../public/social/github-preview.png";
-import linkedinPreview from "../public/social/linkedin-preview.png";
-import twitterPreview from "../public/social/twitter-preview.png";
+import githubPreview from "../public/github-preview.webp";
+import linkedinPreview from "../public/linkedin-preview.webp";
+import twitterPreview from "../public/twitter-preview.webp";
 
 export const socialLinks: SocialLink[] = [
   {
