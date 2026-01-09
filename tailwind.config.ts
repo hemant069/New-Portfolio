@@ -56,25 +56,63 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		  animation: {
-			flyAround: "flyAround 4s ease-in-out",
-		  },
-		  keyframes: {
-			flyAround: {
-			  "0%": { transform: "translate(-50%, -50%) rotate(0deg)", top: "80%", left: "50%" },
-			  "25%": { top: "30%", left: "80%", transform: "rotate(45deg)" },
-			  "50%": { top: "10%", left: "50%", transform: "rotate(90deg)" },
-			  "75%": { top: "30%", left: "20%", transform: "rotate(135deg)" },
-			  "100%": { top: "80%", left: "50%", transform: "rotate(180deg)" },
-			},
-		  },
+  		animation: {
+  			flyAround: 'flyAround 4s ease-in-out',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		},
+  		keyframes: {
+  			flyAround: {
+  				'0%': {
+  					transform: 'translate(-50%, -50%) rotate(0deg)',
+  					top: '80%',
+  					left: '50%'
+  				},
+  				'25%': {
+  					top: '30%',
+  					left: '80%',
+  					transform: 'rotate(45deg)'
+  				},
+  				'50%': {
+  					top: '10%',
+  					left: '50%',
+  					transform: 'rotate(90deg)'
+  				},
+  				'75%': {
+  					top: '30%',
+  					left: '20%',
+  					transform: 'rotate(135deg)'
+  				},
+  				'100%': {
+  					top: '80%',
+  					left: '50%',
+  					transform: 'rotate(180deg)'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		}
   	},
-	screens:{
-		sm:'640px',
-		md:'768px',
-		lg:'960px',
-		xl:'1200px',
-	}
+  	screens: {
+  		sm: '640px',
+  		md: '768px',
+  		lg: '960px',
+  		xl: '1200px'
+  	}
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
