@@ -25,11 +25,11 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       className="w-full max-w-sm sm:max-w-md md:max-w-sm lg:max-w-sm xl:max-w-sm mx-auto"
     >
       <Card
-        className="group relative overflow-hidden bg-[#1c1c22] border border-gray-800/50 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
+        className="group  relative overflow-hidden bg-[#1c1c22] border border-gray-800/50 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <CardContent className="p-0 flex flex-col h-full">
+        <CardContent className="p-0  flex flex-col h-full">
           {/* Image Container */}
           <div className="relative overflow-hidden">
             <motion.div

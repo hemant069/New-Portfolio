@@ -23,7 +23,7 @@ const VideoComponent = ({
       <DialogContent className="border border-red-900 bg-black">
         <div className="flex justify-center items-center ">
           {isVideo && (
-            <ReactPlayer playing url={video} controls width={"400px"} />
+            <ReactPlayer url={video} controls width={"400px"} />
           )}
         </div>
       </DialogContent>
