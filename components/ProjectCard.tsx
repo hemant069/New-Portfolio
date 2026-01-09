@@ -25,7 +25,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       className="w-full max-w-sm sm:max-w-md md:max-w-sm lg:max-w-sm xl:max-w-sm mx-auto"
     >
       <Card
-        className="group  relative overflow-hidden bg-[#1c1c22] border border-gray-800/50 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
+        className="group w-[25rem]  relative overflow-hidden bg-[#1c1c22] border border-red-800 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -41,6 +41,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                 src={data.img}
                 width={400}
                 height={250}
+
                 className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover"
                 alt={`${data.name} project image`}
               />

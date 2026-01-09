@@ -19,13 +19,13 @@ const Hero = () => {
 
     return (
         <div>
-            <div className="md:flex items-center gap-10 px-5 justify-between ">
-                <div className='relative w-full h-[20rem]  '>
+            <div className="flex items-center gap-10 px-5 justify-between ">
+                <div className='relative w-full   '>
                     <Image
                         className='w-full h-[20rem] object-cover'
                         src={moon}
-                        width={1920}  // Use a high-resolution source
-                        height={320}  // Maintain aspect ratio
+                        width={1240}  // Use a high-resolution source
+                        height={900}  // Maintain aspect ratio
                         alt='mountain'
                     />
                     <h1 className='text-white text-2xl font-bold absolute top-[10rem] text-center font-mono w-full h-full'>Mountain has infinite possibilities</h1>
