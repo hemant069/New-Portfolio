@@ -23,9 +23,9 @@ const Main = () => {
       <div>
         <WorkExperience />
       </div>
-      <div className="">
+      {/* <div className="">
         <Projects />
-      </div>
+      </div> */}
       <div
 
         className=""

@@ -90,3 +90,9 @@ body {
   opacity: 0.4;
   filter: blur(3px);
 }
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}

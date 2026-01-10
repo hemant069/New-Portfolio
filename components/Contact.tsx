@@ -27,7 +27,7 @@ export function Contact() {
     <div>
       <div className="flex items-center">
         <p className="text-xl">Let's Build Something Awesome Together! </p>
-        <p className="text-5xl animate-bounce">🙋‍♂️</p>
+        <p className="text-4xl animate-bounce">🙋‍♂️</p>
       </div>
 
       <div className="mt-4">

@@ -25,16 +25,16 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       className="w-full max-w-sm sm:max-w-md md:max-w-sm lg:max-w-sm xl:max-w-sm mx-auto"
     >
       <Card
-        className="group w-[25rem]  relative overflow-hidden bg-[#1c1c22] border border-red-800 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
+        className="group w-[25rem]  relative  [background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border  shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <CardContent className="p-0  flex flex-col h-full">
           {/* Image Container */}
-          <div className="relative overflow-hidden">
+          <div className="relative ">
             <motion.div
               whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="w-full"
             >
               <Image
