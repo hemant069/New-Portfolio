@@ -8,6 +8,7 @@ import Social from "./Social";
 import Header from "./Header";
 import Hero from "./Hero";
 import WorkExperience from "./WorkExperience";
+import Test from "./Test";
 
 const Main = () => {
 
@@ -26,6 +27,9 @@ const Main = () => {
       {/* <div className="">
         <Projects />
       </div> */}
+      <div>
+        <Test />
+      </div>
       <div
 
         className=""
