@@ -29,7 +29,7 @@ const Hero = () => {
                         alt='mountain'
                     />
                     <h1 className='text-white text-2xl font-bold absolute lg:top-[10rem]  top-20 text-center font-mono w-full h-full'>Mountain has infinite possibilities</h1>
-                    <div className='absolute  lg:top-[15rem] top-[12rem] left-0 right-0 mx-auto w-full h-full '>
+                    <div className='absolute  lg:top-[15rem] sm:top-[9rem] top-[12rem] md:top-[26rem] left-0 right-0 mx-auto w-full h-full '>
                         <Image className=' w-[6rem] h-[6rem] lg:w-[8rem] lg:h-[8rem] object-cover rounded-full shadow-inner shadow-white ' src={myimg} alt='my-img' width={500} height={500} />
                     </div>
                 </div>

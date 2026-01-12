@@ -11,7 +11,7 @@ export default function Home() {
   });
 
   return (
-    <div className="lg:max-w-4xl mx-auto animate-fade-in-blur ">
+    <div className="lg:max-w-4xl px-4 mx-auto animate-fade-in-blur ">
       <div className="">
         <motion.div
           className=" sticky top-0 left-0 right-0 h-1 bg-red-700 origin-left z-50"

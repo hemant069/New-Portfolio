@@ -30,7 +30,7 @@ const Main = () => {
 
       <div
 
-        className=""
+        className="mt-4"
       >
         <Contact />
       </div>
