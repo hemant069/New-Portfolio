@@ -1,6 +1,6 @@
 import { projectTypes } from "@/types/projectTypes";
 import instagram from "../public/Projects/instagram_donwloder.png";
-import frazzo from "../public/Projects/Frazzo.jpg";
+import frazzo from "../public/Projects/Frazzo.png";
 import baazaar from "../public/Projects/baazarcart.png";
 import gitcard from "../public/Projects/gitcard.png";
 // import baazarvideo from "video/baazarCart.mp4";

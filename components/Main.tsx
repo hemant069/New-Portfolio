@@ -24,12 +24,10 @@ const Main = () => {
       <div>
         <WorkExperience />
       </div>
-      {/* <div className="">
+      <div className="">
         <Projects />
-      </div> */}
-      <div>
-        <Test />
       </div>
+
       <div
 
         className=""

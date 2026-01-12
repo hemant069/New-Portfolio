@@ -60,7 +60,7 @@ export default {
         flyAround: "flyAround 4s ease-in-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        border: "rotate 10s linear infinite",
+        rotate: "rotate 10s linear infinite",
       },
       keyframes: {
         flyAround: {
