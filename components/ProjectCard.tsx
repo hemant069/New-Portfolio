@@ -22,7 +22,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: (index || 0) * 0.1 }}
       whileHover={{ y: -4 }}
-      className="w-[25rem] max-w-lg "
+      className="lg:w-[25rem]  "
     >
       <div className="  border border-slate-800  p-[0.98] rounded-sm relative z-10 overflow-hidden bg-[conic-gradient(#0ea5e9_20deg] ">
         <div

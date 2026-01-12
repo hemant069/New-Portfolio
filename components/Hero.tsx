@@ -19,24 +19,24 @@ const Hero = () => {
 
     return (
         <div>
-            <div className="flex items-center gap-10 px-5 justify-between ">
-                <div className='relative w-full   '>
+            <div className="flex items-center gap-10  justify-between ">
+                <div className='relative w-full lg:h-[20rem]   '>
                     <Image
-                        className='w-full h-[20rem] object-cover'
+                        className='w-full lg:h-[290px]  object-cover'
                         src={moon}
                         width={1240}  // Use a high-resolution source
                         height={900}  // Maintain aspect ratio
                         alt='mountain'
                     />
-                    <h1 className='text-white text-2xl font-bold absolute top-[10rem] text-center font-mono w-full h-full'>Mountain has infinite possibilities</h1>
-                    <div className='absolute top-[15rem] left-0 right-0 mx-auto w-full h-full '>
-                        <Image className='w-[8rem] h-[8rem] object-cover rounded-full shadow-inner shadow-white ' src={myimg} alt='my-img' width={500} height={500} />
+                    <h1 className='text-white text-2xl font-bold absolute lg:top-[10rem]  top-20 text-center font-mono w-full h-full'>Mountain has infinite possibilities</h1>
+                    <div className='absolute  lg:top-[15rem] top-[12rem] left-0 right-0 mx-auto w-full h-full '>
+                        <Image className=' w-[6rem] h-[6rem] lg:w-[8rem] lg:h-[8rem] object-cover rounded-full shadow-inner shadow-white ' src={myimg} alt='my-img' width={500} height={500} />
                     </div>
                 </div>
 
             </div>
-            <div className='flex items-center justify-between '>
-                <div className='mt-12 text-start'>
+            <div className='flex mt-14 items-center justify-between '>
+                <div className='lg:mt-12 text-start'>
                     <h1 className='text-2xl italic font-bold '>Hemant Prajapati</h1>
                     <p className='text-xs text-gray-500'>Engineer | Software Developer</p>
                 </div>
