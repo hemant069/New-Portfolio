@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Jost } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
 
-const Jostfont = Jost({
+
+const Geistfont = Geist({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600"],
 });
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${Jostfont} ${Jostfont} antialiased`}>{children}</body>
+      <body className={`${Geistfont} ${Geistfont} antialiased`}>{children}</body>
     </html>
   );
 }
