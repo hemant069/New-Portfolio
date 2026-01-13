@@ -35,9 +35,9 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='flex mt-14 items-center justify-between '>
+            <div className='flex  mt-14 items-center justify-between '>
                 <div className=' text-start'>
-                    <h1 className='text-2xl italic font-bold '>Hemant Prajapati</h1>
+                    <h1 className='lg:text-2xl text-xl italic font-bold  '>Hemant Prajapati</h1>
                     <p className='text-xs text-gray-500'>Engineer | Software Developer</p>
                 </div>
                 <div className='flex items-center gap-3 justify-center z-50 '>
@@ -51,7 +51,7 @@ const Hero = () => {
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="cursor-pointer border border-slate-300 bg-gray-950 rounded-full p-1 hover:opacity-80 transition-opacity"
+                                            className="cursor-pointer border border-slate-300 bg-gray-950 rounded-lg shadow-md p-1 hover:opacity-80 transition-opacity"
                                         >
                                             <Icon className="w-5 h-5" />
                                         </Link>
