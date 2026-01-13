@@ -25,7 +25,7 @@ export function Contact() {
 
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex mt-4 items-center">
         <p className="text-xl">Let's Build Something Awesome Together! </p>
         <p className="text-3xl animate-bounce">🙋‍♂️</p>
       </div>
@@ -71,6 +71,10 @@ export function Contact() {
       </div>
 
       {/* your form (still commented) ... */}
+      <div className="flex flex-col justify-center items-center mt-2">
+        <p>Design & Developed by <span className="font-semibold font-mono">Hemant</span></p>
+        <p> © 2026. All rights reserved.</p>
+      </div>
     </div>
   );
 }

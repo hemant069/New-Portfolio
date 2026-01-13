@@ -24,13 +24,13 @@ const Main = () => {
       <div>
         <WorkExperience />
       </div>
-      <div className="">
+      <div >
         <Projects />
       </div>
 
       <div
 
-        className="mt-4"
+        className=""
       >
         <Contact />
       </div>

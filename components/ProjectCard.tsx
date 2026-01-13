@@ -22,7 +22,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: (index || 0) * 0.1 }}
       whileHover={{ y: -4 }}
-      className="lg:w-[25rem]  "
+      className="lg:w-[25rem] w-full "
     >
       <div className="  border border-slate-800  p-[0.98] rounded-sm relative z-10 overflow-hidden bg-[conic-gradient(#0ea5e9_20deg] ">
         <div
@@ -47,7 +47,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                   width={400}
                   height={250}
 
-                  className="w-full object-cover rounded-lg h-40 sm:h-44 md:h-48 lg:h-52 "
+                  className="w-full  object-cover rounded-lg h-40 sm:h-44 md:h-48 lg:h-52 "
                   alt={`${data.name} project image`}
                 />
               </motion.div>
@@ -129,10 +129,10 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
               {/* Title and Links */}
               <div className="flex  gap-2 sm:gap-3">
                 <motion.h3
-                  className="text-base sm:text-lg md:text-lg font-bold text-white flex-1 min-w-0"
+                  className="text-base sm:text-lg md:text-lg font-semibold text-white flex-1 min-w-0"
                   whileHover={{ x: 2 }}
                 >
-                  <span className="break-words">{data.name}</span>
+                  <span className="break-words ">{data.name}</span>
                 </motion.h3>
 
                 {/* Links - Always Visible */}

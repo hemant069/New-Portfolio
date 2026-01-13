@@ -12,7 +12,7 @@ const Projects = () => {
       <p className="text-start text-gray-500 mt-2">Featured</p>
       <h2 className="text-xl">My Projects</h2>
 
-      <div className="w-full grid lg:grid-cols-2 sm:grid-cols-1 m-auto gap-8 mt-2">
+      <div className="w-full grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 m-auto gap-8 mt-2">
         {ProjectDetails.map((el: projectTypes, index: number) => (
           <ProjectCard data={el} key={index} />
         ))}

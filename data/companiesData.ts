@@ -1,4 +1,10 @@
 import { companiesTypes } from "@/types/companiesTypes";
+import React from "../public/skills/react.svg";
+import Css from "../public/skills/css.svg";
+import Javascript from "../public/skills/javascript.svg";
+import tailwind from "../public/skills/tailwind.svg";
+import MongoDb from "../public/skills/mongoDB.svg";
+import NextJs from "../public/skills/nextJS.svg";
 
 export const companies: companiesTypes[] = [
   {
@@ -14,7 +20,7 @@ export const companies: companiesTypes[] = [
       "Designed, developed, and deployed a backend for a Chatbot solution that switches between various internal APIs using different NLU intents.",
     ],
     status: true,
-    tools: "ReactJs,NextJs,NodeJs,Postgress",
+    tools: [React, NextJs, Javascript, tailwind, Css, MongoDb],
   },
   {
     name: "Masai labs",
@@ -29,6 +35,6 @@ export const companies: companiesTypes[] = [
       "Utilized React and react-chartjs to implement an analytics view, providing administrators with visually insightful data to drive informed decision-making.",
     ],
     status: false,
-    tools: "ReactJs,NextJs,NodeJs,Postgress",
+    tools: [React, NextJs, Javascript],
   },
 ];

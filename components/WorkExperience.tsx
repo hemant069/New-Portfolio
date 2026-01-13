@@ -6,6 +6,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from 'next/image'
 
 const WorkExperience = () => {
     return (
@@ -16,7 +17,7 @@ const WorkExperience = () => {
             </div>
 
             <div className='mt-4'>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w-full" defaultValue='item-0'>
                     {companies.map((item, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
                             <AccordionTrigger className="hover:no-underline">
@@ -38,10 +39,19 @@ const WorkExperience = () => {
                                             {desc}
                                         </p>
                                     ))}
-                                    <div className='pt-2'>
-                                        <p className='text-xs text-gray-400'>
-                                            <span className='font-semibold'>Tools:</span> {item.tools}
-                                        </p>
+                                    <div className='pt-2 flex gap-2 items-center'>
+                                        <p className='text-sm '>Technologies & Tools</p>
+                                        {
+                                            item.tools.map((item, index) => <div key={index}>
+                                                <Image
+                                                    src={item}
+                                                    width={30}
+                                                    height={30}
+                                                    alt={`item-${index}`}
+                                                    className='w-5'
+                                                />
+                                            </div>)
+                                        }
                                     </div>
                                 </div>
                             </AccordionContent>
