@@ -35,7 +35,7 @@ export function Contact() {
       </div>
 
       {/* Social list with hover previews */}
-      <div className="mt-3 flex flex-wrap gap-4">
+      <div className="mt-3 grid grid-cols-2 lg:grid-cols-4 gap-2">
         <TooltipProvider delayDuration={0}>
           {socialLinks.map((link) => {
             const Icon = link.icon;
@@ -46,7 +46,7 @@ export function Contact() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-md border border-border px-3 py-2 hover:bg-accent/40 transition-colors"
+                    className="flex items-center justify-center gap-2 rounded-md border border-border px-3 py-2 hover:bg-accent/40 transition-colors"
                   >
                     <Icon className="w-5 h-5" />
                     <span className="text-sm">{link.label}</span>
@@ -71,9 +71,9 @@ export function Contact() {
       </div>
 
       {/* your form (still commented) ... */}
-      <div className="flex flex-col justify-center items-center mt-2">
-        <p>Design & Developed by <span className="font-semibold font-mono">Hemant</span></p>
-        <p> © 2026. All rights reserved.</p>
+      <div className="flex flex-col justify-center items-center mt-4">
+        <p className="text-sm">Design & Developed by <span className="font-semibold font-mono">Hemant</span></p>
+        <p className="text-sm"> © 2026. All rights reserved.</p>
       </div>
     </div>
   );
