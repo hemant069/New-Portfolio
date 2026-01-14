@@ -13,7 +13,7 @@ const WorkExperience = () => {
         <div className='w-full'>
             <div className='text-start'>
                 <h3 className='text-md text-gray-500 mt-2 '>Featured</h3>
-                <h1 className='text-xl'>Work Experience</h1>
+                <h1 className='text-xl font-semibold'>Work Experience</h1>
             </div>
 
             <div className='mt-4'>
@@ -35,7 +35,7 @@ const WorkExperience = () => {
                             <AccordionContent>
                                 <div className='space-y-2 pt-2'>
                                     {item.description.map((desc: string, ind: number) => (
-                                        <p className='text-sm text-gray-500' key={ind}>
+                                        <p className='text-sm text-gray-300' key={ind}>
                                             {desc}
                                         </p>
                                     ))}

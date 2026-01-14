@@ -67,7 +67,7 @@ const Hero = () => {
 
             </div>
             <div className='text-start  mt-4  text-gray-500'>
-                <p className=''>I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences, I work across the entire development lifecycle. From UI/UX to deployment to user feedback, I care less about technology debates and more about delivering results that people love using.</p>
+                <p className='leading-6 text-gray-300'>I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences, I work across the entire development lifecycle. From UI/UX to deployment to user feedback, I care less about technology debates and more about delivering results that people love using.</p>
             </div>
         </div>
     )

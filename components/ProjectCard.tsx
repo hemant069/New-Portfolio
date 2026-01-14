@@ -22,19 +22,19 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: (index || 0) * 0.1 }}
       whileHover={{ y: -4 }}
-      className="lg:w-[25rem] w-full "
+      className="  w-full "
     >
       <div className="  border border-slate-800  p-[0.98] rounded-sm relative z-10 overflow-hidden bg-[conic-gradient(#0ea5e9_20deg] ">
         <div
           className="animate-rotate rounded-sm  absolute inset-0 h-full w-full  bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
         ></div>
         <Card
-          className="border-none rounded-none    relative z-20 bg-slate-800 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 h-full flex flex-col"
+          className="border-none rounded-none h-full   relative z-20 bg-slate-800 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300  flex flex-col"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
 
-          <CardContent className="p-0  flex flex-col  ">
+          <CardContent className="p-0  flex flex-col   ">
             {/* Image Container */}
             <div className="relative ">
               <motion.div
@@ -180,7 +180,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
               </div>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm text-gray-500 leading-relaxed line-clamp-2 sm:line-clamp-3 flex-1">
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-2 sm:line-clamp-3 flex-1">
                 {data.description}
               </p>
 
@@ -196,7 +196,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       scale: 1.05,
                       backgroundColor: "rgba(255, 255, 255, 0.1)"
                     }}
-                    className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-gray-400 bg-gray-800/50 border border-gray-700/50 rounded-md transition-all duration-200"
+                    className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-gray-300 bg-gray-800/50 border border-gray-700/50 rounded-md transition-all duration-200"
                   >
                     {tech.trim()}
                   </motion.span>
