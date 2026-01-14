@@ -15,9 +15,7 @@ const Main = () => {
 
   return (
     <>
-      {/* <div>
-        <Header Connect={Connect} ProjectScroll={ProjectScroll} />
-      </div> */}
+
       <div>
         <Hero />
       </div>

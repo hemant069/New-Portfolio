@@ -40,7 +40,7 @@ const Hero = () => {
                     <h1 className='lg:text-2xl text-xl italic font-bold  '>Hemant Prajapati</h1>
                     <p className='text-xs text-gray-500'>Engineer | Software Developer</p>
                 </div>
-                <div className='flex items-center gap-3 justify-center z-50 '>
+                <div className='flex items-center gap-3 justify-center z-40 '>
                     <TooltipProvider delayDuration={0.95}>
                         {socialLinks.map((link) => {
                             const Icon = link.icon;

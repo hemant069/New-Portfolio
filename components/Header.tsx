@@ -11,7 +11,7 @@ type ChildComponentProps = {
 const Header: React.FC<ChildComponentProps> = ({ Connect, ProjectScroll }) => {
   return (
     <div
-      className="py-8 xl:py-12 xl:px-4
+      className="p-2
     "
     >
       <div className="flex justify-between items-center">

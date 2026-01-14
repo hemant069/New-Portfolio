@@ -35,7 +35,7 @@ export function Contact() {
       </div>
 
       {/* Social list with hover previews */}
-      <div className="mt-3 grid grid-cols-2 lg:grid-cols-4 gap-2">
+      <div className="mt-4 flex  gap-2">
         <TooltipProvider delayDuration={0}>
           {socialLinks.map((link) => {
             const Icon = link.icon;
@@ -49,7 +49,7 @@ export function Contact() {
                     className="flex items-center justify-center gap-2 rounded-md border border-border px-3 py-2 hover:bg-accent/40 transition-colors"
                   >
                     <Icon className="w-5 h-5" />
-                    <span className="text-sm">{link.label}</span>
+                    <span className=" hidden text-sm">{link.label}</span>
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center gap-2">
