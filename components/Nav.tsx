@@ -6,7 +6,7 @@ type ChildComponentProps = {
 type handleresume = {
   handleResume: () => void;
 };
-const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
+const Nav = () => {
   const Addnav = [
     {
       name: "Resume",
@@ -28,11 +28,8 @@ const Nav: React.FC<ChildComponentProps> = ({ ProjectScroll, Connect }) => {
         <div
           className="cursor-pointer   hover:border-b-2 border-b-red-800"
           onClick={
-            el.name === "Project"
-              ? ProjectScroll
-              : el.name === "Connect with Me :)"
-              ? Connect
-              : el.name === "Resume"
+
+            el.name === "Resume"
               ? handleResume
               : () => console.log("Noting")
           }

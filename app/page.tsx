@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
+import MobiNav from "@/components/MobiNav";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Home() {
@@ -18,10 +19,15 @@ export default function Home() {
           className=" sticky top-0 left-0 right-0 h-1 bg-red-700 origin-left z-50"
           style={{ scaleX }}
         />
-        <div className="sticky top-0 z-50 backdrop-blur-2xl">
+        <div className="sticky top-0 z-50 backdrop-blur-md">
           <Header />
         </div>
         <Main />
+
+        {/* For now not decided which things will add inside mobile nav  */}
+        <div className="xl:hidden sticky bottom-0 z-50 backdrop-blur-md">
+          <MobiNav />
+        </div>
       </div>
     </div>
   );
