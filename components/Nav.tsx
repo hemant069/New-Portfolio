@@ -11,12 +11,7 @@ const Nav = () => {
     {
       name: "Resume",
     },
-    {
-      name: "Project",
-    },
-    {
-      name: "Connect with Me :)",
-    },
+
   ];
   const handleResume = (): void => {
     window.location.href =
