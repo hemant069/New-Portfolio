@@ -8,6 +8,18 @@ import gitcard from "../public/Projects/gitcard.png";
 const baazarvideo = "video/baazarCart.mp4";
 const instagramvideo = "video/instagram.mp4";
 export const ProjectDetails: projectTypes[] = [
+  // need changes
+  {
+    id: 1,
+    name: "MindVerse",
+    description:
+      "Bazaarcart is an e-commerce application that provides customers with a convenient and hassle-free shopping experience. At Bazaarcart, we offer a wide range of products including mobile devices, groceries, and clothes.",
+    tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
+    live_link: "https://bazaarcart.vercel.app/",
+    github_link: "https://github.com/hemant069/Bazaar-Cart",
+    img: baazaar,
+    video: baazarvideo,
+  },
   {
     id: 1,
     name: "BaazarCart",
