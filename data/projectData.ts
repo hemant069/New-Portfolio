@@ -8,7 +8,7 @@ import gitcard from "../public/Projects/gitcard.png";
 const baazarvideo = "video/baazarCart.mp4";
 const instagramvideo = "video/instagram.mp4";
 export const ProjectDetails: projectTypes[] = [
-  // need changes
+
   {
     id: 1,
     name: "MindVerse",
