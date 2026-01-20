@@ -8,7 +8,6 @@ import gitcard from "../public/Projects/gitcard.png";
 const baazarvideo = "video/baazarCart.mp4";
 const instagramvideo = "video/instagram.mp4";
 export const ProjectDetails: projectTypes[] = [
-
   {
     id: 1,
     name: "MindVerse",
@@ -21,7 +20,7 @@ export const ProjectDetails: projectTypes[] = [
     video: baazarvideo,
   },
   {
-    id: 1,
+    id: 2,
     name: "BaazarCart",
     description:
       "Bazaarcart is an e-commerce application that provides customers with a convenient and hassle-free shopping experience. At Bazaarcart, we offer a wide range of products including mobile devices, groceries, and clothes.",
@@ -42,7 +41,7 @@ export const ProjectDetails: projectTypes[] = [
     img: gitcard,
   },
   {
-    id: 2,
+    id: 4,
     name: "Frazzo Clone",
     description:
       "Frazzo Clone is a replica e-commerce platform that provides an intuitive user experience for online shopping, featuring a wide range of products and seamless navigation.",
@@ -52,7 +51,7 @@ export const ProjectDetails: projectTypes[] = [
     img: frazzo,
   },
   {
-    id: 4,
+    id: 5,
     name: "Instagram Downloader",
     description:
       "Instagram downloader is web application where user can download the reels just sharing the link of the reels",
