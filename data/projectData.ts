@@ -3,6 +3,7 @@ import instagram from "../public/Projects/instagram_donwloder.png";
 import frazzo from "../public/Projects/Frazzo.png";
 import baazaar from "../public/Projects/baazarcart.png";
 import gitcard from "../public/Projects/gitcard.png";
+import mindverse from "../public/Projects/mindverse.png";
 // import baazarvideo from "video/baazarCart.mp4";
 // import instagramvideo from "video/instagram.mp4";
 const baazarvideo = "video/baazarCart.mp4";
@@ -12,12 +13,12 @@ export const ProjectDetails: projectTypes[] = [
     id: 1,
     name: "MindVerse",
     description:
-      "Bazaarcart is an e-commerce application that provides customers with a convenient and hassle-free shopping experience. At Bazaarcart, we offer a wide range of products including mobile devices, groceries, and clothes.",
+      "Mindverse is place where people can share their throught and stories.",
     tech: "Javascript, ReactJs, Tailwind, Redux, ExpressJs, MongoDB, Nodejs",
-    live_link: "https://bazaarcart.vercel.app/",
-    github_link: "https://github.com/hemant069/Bazaar-Cart",
-    img: baazaar,
-    video: baazarvideo,
+    live_link: "https://mindverse-phi.vercel.app/",
+    github_link: "https://github.com/hemant069/BlogApp",
+    img: mindverse,
+    
   },
   {
     id: 2,
