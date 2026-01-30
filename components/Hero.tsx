@@ -12,7 +12,7 @@ import { Button } from './ui/button';
 import { Github } from 'lucide-react';
 import { socialLinks } from '@/data/socialLinks';
 import Link from 'next/link';
-import { SocialLink } from '@/types/socialTypes';
+
 
 
 const Hero = () => {
