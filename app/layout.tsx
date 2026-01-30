@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import Oneko from "@/components/Oneko";
 
 
 const Geistfont = Geist({
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${Geistfont} ${Geistfont} antialiased`}>{children}</body>
+      <body className={`${Geistfont} ${Geistfont} antialiased`}>
+        <Oneko />
+        {children}
+      </body>
     </html>
   );
 }
