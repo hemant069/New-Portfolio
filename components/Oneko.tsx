@@ -1,6 +1,6 @@
 import { catconfig } from '@/config/Catconfig'
 import Script from 'next/script'
-
+import React from 'react';
 const Oneko = () => {
 
     if (!catconfig.enabled) {
