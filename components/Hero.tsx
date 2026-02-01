@@ -27,6 +27,7 @@ const Hero = () => {
                         width={1240}  // Use a high-resolution source
                         height={900}  // Maintain aspect ratio
                         alt='mountain'
+                        priority
                     />
                     <h1 className='text-white text-2xl font-bold absolute lg:top-[10rem]  top-20 text-center font-mono w-full h-full'>Mountain has infinite possibilities</h1>
                     <div className='absolute lg:top-[15rem] sm:top-[12rem] top-[9rem] md:top-[26rem] left-0 right-0 mx-auto w-full h-full '>
