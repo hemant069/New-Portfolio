@@ -107,15 +107,15 @@ const Github = () => {
         fetchData();
     }, []);
     return (
-        <div className='mt-12'>
+        <div className='mt-8'>
             <div className="space-y-6">
                 {/* Header */}
                 <div className="flex items-center justify-between">
                     <div>
-                        <h2 className=" text-2xl font-bold">
+                        <h2 className=" text-xl font-semibold">
                             {githubConfig.title}
                         </h2>
-                        <p className=" text-sm">
+                        <p className="text-sm">
                             <b>{githubConfig.username}</b>&apos;s {githubConfig.subtitle}
                         </p>
                         {!isLoading && !hasError && totalContributions > 0 && (
@@ -166,9 +166,8 @@ const Github = () => {
                                 <ActivityCalendar
                                     data={contributions}
                                     blockSize={12}
-                                    blockMargin={4}
+                                    blockMargin={3}
                                     fontSize={githubConfig.fontSize}
-
                                     maxLevel={githubConfig.maxLevel}
                                     hideTotalCount={true}
                                     hideColorLegend={false}
@@ -179,9 +178,7 @@ const Github = () => {
                                         weekdays: githubConfig.weekdays,
                                         totalCount: githubConfig.totalCountLabel,
                                     }}
-                                    style={{
-                                        color: 'rgb(139, 148, 158)',
-                                    }}
+
                                 />
                             </div>
                         </div>
