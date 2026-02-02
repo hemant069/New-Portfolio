@@ -1,6 +1,13 @@
 // oneko.js: https://github.com/adryd325/oneko.js
 console.log("ONEKO: script file executed");
 
+let interactionMode = null; // null | "sleep" | "jump"
+let jumpVelocity = 0;
+let gravity = 3;
+let groundY = null;
+
+let clickTimer = null;
+
 (function oneko() {
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
@@ -133,7 +140,38 @@ console.log("ONEKO: script file executed");
 
     document.body.appendChild(nekoEl);
 
+    nekoEl.style.pointerEvents = "auto";
+
+    nekoEl.addEventListener("click", () => {
+      if (clickTimer) return;
+
+      clickTimer = setTimeout(() => {
+        interactionMode = "sleep";
+        idleAnimation = "sleeping";
+        idleAnimationFrame = 0;
+        clickTimer = null;
+      }, 250);
+    });
+
+    nekoEl.addEventListener("dblclick", () => {
+      clearTimeout(clickTimer);
+      clickTimer = null;
+
+      if (interactionMode === "jump") return;
+
+      interactionMode = "jump";
+      jumpVelocity = -18 - Math.random() * 6;
+
+      groundY = nekoPosY;
+    });
+
     document.addEventListener("mousemove", function (event) {
+      if (interactionMode === "sleep") {
+        interactionMode = null;
+        idleAnimation = null;
+        idleTime = 0;
+      }
+
       mousePosX = event.clientX;
       mousePosY = event.clientY;
     });
@@ -244,6 +282,28 @@ console.log("ONEKO: script file executed");
   }
 
   function frame() {
+    // --- INTERACTION OVERRIDES ---
+    if (interactionMode === "jump") {
+      jumpVelocity += gravity;
+      nekoPosY += jumpVelocity;
+
+      setSprite("N", frameCount);
+
+      if (nekoPosY >= groundY) {
+        nekoPosY = groundY;
+        interactionMode = null;
+        jumpVelocity = 0;
+      }
+
+      nekoEl.style.top = `${nekoPosY - 16}px`;
+      return;
+    }
+
+    if (interactionMode === "sleep") {
+      idle();
+      return;
+    }
+
     frameCount += 1;
     const diffX = nekoPosX - mousePosX;
     const diffY = nekoPosY - mousePosY;

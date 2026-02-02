@@ -167,11 +167,11 @@ const Github = () => {
                                     data={contributions}
                                     blockSize={12}
                                     blockMargin={3}
+                                    blockRadius={4}
                                     fontSize={githubConfig.fontSize}
                                     maxLevel={githubConfig.maxLevel}
-                                    hideTotalCount={true}
-                                    hideColorLegend={false}
-                                    hideMonthLabels={false}
+
+
                                     theme={githubConfig.theme}
                                     labels={{
                                         months: githubConfig.months,
