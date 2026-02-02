@@ -1,32 +1,24 @@
 'use client'
 
-import { catconfig } from '@/config/Catconfig'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { catconfig } from '@/config/Catconfig'
 
 const Oneko = () => {
-
-    if (!catconfig.enabled) {
-        return null
-    }
-
-    useEffect(() => {
-        // The script should auto-execute, but ensure it runs
-        const timer = setTimeout(() => {
-            if (typeof window !== 'undefined' && window.oneko) {
-                window.oneko();
-            }
-        }, 500);
-
-        return () => clearTimeout(timer);
-    }, []);
+    if (!catconfig.enabled) return null
 
     return (
-        <Script
-            src='/Oneko/oneko.js'
-            data-cat="/Oneko/oneko.gif"
-            strategy="afterInteractive"
-        />
+        <>
+            {/* MUST run before oneko.js */}
+            <Script id="oneko-force" strategy="beforeInteractive">
+                {`window.ONEKO_FORCE = true;`}
+            </Script>
+
+            <Script
+                src="/oneko/oneko.js"
+                data-cat="/oneko/oneko.gif"
+                strategy="afterInteractive"
+            />
+        </>
     )
 }
 

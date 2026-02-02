@@ -1,11 +1,13 @@
 // oneko.js: https://github.com/adryd325/oneko.js
+console.log("ONEKO: script file executed");
 
 (function oneko() {
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
     window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
-  if (isReducedMotion) return;
+  const force = window.ONEKO_FORCE === true;
+  if (isReducedMotion && !force) return;
 
   const nekoEl = document.createElement("div");
   let persistPosition = true;
