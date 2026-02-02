@@ -8,7 +8,7 @@ import Github from "./Github";
 
 const Main = () => {
 
-
+  // <script defer src="https://cloud.umami.is/script.js" data-website-id="b6242faa-29d0-49f4-9a44-73c9ec94be8e"></script>
   return (
     <div>
 

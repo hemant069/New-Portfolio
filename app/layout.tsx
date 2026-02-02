@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Oneko from "@/components/Oneko";
+import UmamiAnalytics from "@/components/Umami";
 
 
 const Geistfont = Geist({
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${Geistfont} ${Geistfont} antialiased`}>
+        {process.env.NODE_ENV === "production" && <UmamiAnalytics />}
         <Oneko />
         {children}
       </body>
