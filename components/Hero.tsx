@@ -37,7 +37,7 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='flex  mt-12 items-center justify-between '>
+            <div className='flex  mt-14 items-center justify-between '>
                 <div className=' text-start'>
                     <h1 className='lg:text-2xl text-lg italic font-bold  '>Hemant Prajapati</h1>
                     <p className='text-xs text-gray-500'>Engineer | Software Developer</p>

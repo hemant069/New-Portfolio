@@ -36,7 +36,7 @@ export function Contact() {
       </div>
 
       {/* Social list with hover previews */}
-      <div className="mt-4  flex justify-between ">
+      <div className="mt-4  lg:flex justify-between ">
         <div className="flex  gap-2">
           <TooltipProvider delayDuration={0}>
             {socialLinks.map((link) => {
@@ -71,7 +71,9 @@ export function Contact() {
             })}
           </TooltipProvider>
         </div>
-        <VisitorCounter />
+        <div className="flex justify-center">
+          <VisitorCounter />
+        </div>
       </div>
 
       {/* your form (still commented) ... */}
