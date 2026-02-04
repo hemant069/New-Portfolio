@@ -12,6 +12,7 @@ import { Button } from './ui/button';
 import { Github } from 'lucide-react';
 import { socialLinks } from '@/data/socialLinks';
 import Link from 'next/link';
+import VisitorCounter from './VisitorCount';
 
 
 
@@ -36,34 +37,37 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='flex  mt-14 items-center justify-between '>
+            <div className='flex  mt-10 items-center justify-between '>
                 <div className=' text-start'>
                     <h1 className='lg:text-2xl text-lg italic font-bold  '>Hemant Prajapati</h1>
                     <p className='text-xs text-gray-500'>Engineer | Software Developer</p>
                 </div>
-                <div className='flex items-center gap-3 justify-center z-40 '>
-                    <TooltipProvider delayDuration={0.95}>
-                        {socialLinks.map((link) => {
-                            const Icon = link.icon;
-                            return (
-                                <Tooltip key={link.href} >
-                                    <TooltipTrigger asChild>
-                                        <Link
-                                            href={link.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="cursor-pointer border border-slate-300 bg-gray-950 rounded-lg shadow-md p-1 hover:opacity-80 transition-opacity"
-                                        >
-                                            <Icon className="w-5 h-5" />
-                                        </Link>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p>{link.label}</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            );
-                        })}
-                    </TooltipProvider>
+                <div>
+                    <VisitorCounter />
+                    <div className='flex items-center gap-3 justify-center z-40 '>
+                        <TooltipProvider delayDuration={0.95}>
+                            {socialLinks.map((link) => {
+                                const Icon = link.icon;
+                                return (
+                                    <Tooltip key={link.href} >
+                                        <TooltipTrigger asChild>
+                                            <Link
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="cursor-pointer border border-slate-300 bg-gray-950 rounded-lg shadow-md p-1 hover:opacity-80 transition-opacity"
+                                            >
+                                                <Icon className="w-5 h-5" />
+                                            </Link>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>{link.label}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                );
+                            })}
+                        </TooltipProvider>
+                    </div>
                 </div>
 
             </div>

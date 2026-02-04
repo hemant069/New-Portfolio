@@ -4,7 +4,6 @@ import { Contact } from "./Contact";
 import Hero from "./Hero";
 import WorkExperience from "./WorkExperience";
 import Github from "./Github";
-import VisitorCounter from "./VisitorCount";
 
 
 const Main = () => {
@@ -17,7 +16,6 @@ const Main = () => {
       <WorkExperience />
       <Projects />
       <Github />
-      <VisitorCounter />
       <Contact />
 
     </div>

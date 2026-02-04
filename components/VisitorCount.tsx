@@ -1,10 +1,19 @@
-// components/VisitorCounter.jsx (Tailwind CSS version)
-// Use this if your portfolio uses Tailwind CSS
+// components/VisitorCount.tsx
+// Tailwind CSS version
+
+'use client';
 
 import { useEffect, useState } from 'react';
 
+type VisitorStats = {
+    visitors: number;
+    pageviews: number;
+    bounceRate: number;
+    visitDuration: number;
+};
+
 const VisitorCounter = () => {
-    const [visitorCount, setVisitorCount] = useState(null);
+    const [stats, setStats] = useState<VisitorStats | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
@@ -14,14 +23,19 @@ const VisitorCounter = () => {
 
     const fetchVisitorCount = async () => {
         try {
-            const response = await fetch('/api/visitors');
-            const data = await response.json();
+            const response = await fetch('/api/visitors', { cache: 'no-store' });
 
-            if (data.success) {
-                setVisitorCount(data.count);
-            } else {
-                setError(true);
-            }
+            if (!response.ok) throw new Error('Failed to load visitor stats');
+
+            const data = (await response.json()) as Partial<VisitorStats>;
+            if (typeof data.visitors !== 'number') throw new Error('Invalid stats payload');
+
+            setStats({
+                visitors: data.visitors,
+                pageviews: data.pageviews ?? 0,
+                bounceRate: data.bounceRate ?? 0,
+                visitDuration: data.visitDuration ?? 0,
+            });
         } catch (err) {
             console.error('Error fetching visitor count:', err);
             setError(true);
@@ -30,13 +44,13 @@ const VisitorCounter = () => {
         }
     };
 
-    const getOrdinal = (n) => {
-        const s = ["th", "st", "nd", "rd"];
+    const getOrdinal = (n: number) => {
+        const s = ['th', 'st', 'nd', 'rd'];
         const v = n % 100;
         return s[(v - 20) % 10] || s[v] || s[0];
     };
 
-    const formatNumber = (num) => {
+    const formatNumber = (num: number) => {
         return num.toLocaleString();
     };
 
@@ -45,26 +59,8 @@ const VisitorCounter = () => {
     }
 
     return (
-        <div className="inline-flex items-center gap-3 bg-gray-100 px-6 py-3 rounded-xl shadow-sm">
-            <svg
-                className="w-6 h-6 text-gray-600 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                />
-            </svg>
+        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl shadow-sm">
+
 
             <span className={`text-gray-700 ${loading ? 'animate-pulse' : ''}`}>
                 {loading ? (
@@ -72,9 +68,11 @@ const VisitorCounter = () => {
                 ) : (
                     <>
                         You are the{' '}
-                        <span className="font-semibold text-gray-900">
-                            {formatNumber(visitorCount)}
-                            <sup className="text-xs">{getOrdinal(visitorCount)}</sup>
+                        <span className="font-semibold text-gray-100">
+                            {formatNumber(stats?.visitors ?? 0)}
+                            <sup className="text-xs">
+                                {getOrdinal(stats?.visitors ?? 0)}
+                            </sup>
                         </span>{' '}
                         visitor
                     </>

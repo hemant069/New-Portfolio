@@ -1,13 +1,14 @@
-// app/api/umami-stats/route.js
-
 import { NextResponse } from 'next/server';
+
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
     const UMAMI_URL = process.env.UMAMI_URL;
     const WEBSITE_ID = process.env.UMAMI_WEBSITE_ID;
     const API_TOKEN = process.env.UMAMI_API_TOKEN;
-
+console.log(UMAMI_URL,WEBSITE_ID,API_TOKEN)
     if (!UMAMI_URL || !WEBSITE_ID || !API_TOKEN) {
       return NextResponse.json(
         { error: 'Missing Umami environment variables' },
@@ -15,11 +16,13 @@ export async function GET() {
       );
     }
 
-    // last 30 days
+    // All-time stats: use a very early start time (0 = Unix epoch)
     const endAt = Date.now();
-    const startAt = endAt - 30 * 24 * 60 * 60 * 1000;
+    const startAt = Number(process.env.UMAMI_START_AT ?? 0);
 
-    const url = `${UMAMI_URL}/analytics/us/api/websites/${WEBSITE_ID}/stats?startAt=${startAt}&endAt=${endAt}`;
+    // Normalize base URL (avoid double slashes)
+    const baseUrl = UMAMI_URL.replace(/\/+$/, '');
+    const url = `${baseUrl}/api/websites/${WEBSITE_ID}/stats?startAt=${startAt}&endAt=${endAt}`;
 
     const response = await fetch(url, {
       headers: {
@@ -44,15 +47,25 @@ export async function GET() {
 
     const data = await response.json();
 
+    const readStat = (key: string) => {
+      const value = data?.[key];
+      if (typeof value === 'number') return value;
+      if (value && typeof value.value === 'number') return value.value;
+      return 0;
+    };
+
     return NextResponse.json({
-      pageviews: data.pageviews?.value ?? 0,
-      visitors: data.visitors?.value ?? 0,
-      bounceRate: data.bounceRate?.value ?? 0,
-      visitDuration: data.visitDuration?.value ?? 0,
+      pageviews: readStat('pageviews'),
+      visitors: readStat('visitors'),
+      bounceRate: readStat('bounceRate'),
+      visitDuration: readStat('visitDuration'),
     });
-  } catch (err) {
+  } catch (err: unknown) {
     return NextResponse.json(
-      { error: 'Internal error', message: err.message },
+      {
+        error: 'Internal error',
+        message: err instanceof Error ? err.message : 'Unknown error',
+      },
       { status: 500 }
     );
   }
