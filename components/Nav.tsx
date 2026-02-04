@@ -21,7 +21,8 @@ const Nav = () => {
     <div className="flex items-center gap-8">
       {Addnav.map((el, i) => (
         <div
-          className="cursor-pointer   hover:border-b-2 border-b-red-800"
+          className="cursor-pointer text-foreground hover:text-red-600 dark:hover:text-red-400 
+                     hover:border-b-2 border-b-red-600 dark:border-b-red-500 transition-colors"
           onClick={
 
             el.name === "Resume"

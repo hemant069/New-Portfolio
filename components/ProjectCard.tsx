@@ -24,12 +24,12 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       whileHover={{ y: -4 }}
       className="  w-full "
     >
-      <div className="  border border-slate-800  p-[0.98] rounded-sm relative z-10 overflow-hidden bg-[conic-gradient(#0ea5e9_20deg] ">
+      <div className="border border-border p-[0.98] rounded-sm relative z-10 overflow-hidden">
         <div
-          className="animate-rotate rounded-sm  absolute inset-0 h-full w-full  bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
+          className="animate-rotate rounded-sm absolute inset-0 h-full w-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
         ></div>
         <Card
-          className="border-none rounded-none h-full   relative z-20 bg-slate-800 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300  flex flex-col"
+          className="border-none rounded-none h-full relative z-20 bg-card shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -129,10 +129,10 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
               {/* Title and Links */}
               <div className="flex  gap-2 sm:gap-3">
                 <motion.h3
-                  className="text-base sm:text-lg md:text-lg font-semibold text-white flex-1 min-w-0"
+                  className="text-base sm:text-lg md:text-lg font-semibold text-foreground flex-1 min-w-0"
                   whileHover={{ x: 2 }}
                 >
-                  <span className="break-words ">{data.name}</span>
+                  <span className="break-words">{data.name}</span>
                 </motion.h3>
 
                 {/* Links - Always Visible */}
@@ -142,10 +142,10 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       href={data.live_link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" rounded-md hover:bg-gray-800/50 transition-colors"
+                      className="rounded-md hover:bg-accent/50 transition-colors"
                       aria-label="Visit live site"
                     >
-                      <Globe className="w-3.5 h-3.5  text-gray-400 hover:text-white transition-colors" />
+                      <Globe className="w-3.5 h-3.5 text-muted-foreground hover:text-foreground transition-colors" />
                     </Link>
                   </motion.div>
 
@@ -154,10 +154,10 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       href={data.github_link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-md hover:bg-gray-800/50 transition-colors"
+                      className="rounded-md hover:bg-accent/50 transition-colors"
                       aria-label="View on GitHub"
                     >
-                      <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 hover:text-white transition-colors" />
+                      <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground hover:text-foreground transition-colors" />
                     </Link>
                   </motion.div>
 
@@ -165,7 +165,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                       <Dialog>
                         <DialogTrigger
-                          className=" rounded-md hover:bg-gray-800/50 transition-colors"
+                          className="rounded-md hover:bg-accent/50 transition-colors"
                           onClick={() => setisVideo(true)}
                           aria-label="Play video"
                         >
@@ -180,7 +180,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
               </div>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-2 sm:line-clamp-3 flex-1">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-2 sm:line-clamp-3 flex-1">
                 {data.description}
               </p>
 
@@ -196,7 +196,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       scale: 1.05,
                       backgroundColor: "rgba(255, 255, 255, 0.1)"
                     }}
-                    className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-gray-300 bg-gray-800/50 border border-gray-700/50 rounded-md transition-all duration-200"
+                    className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-muted-foreground bg-muted/50 border border-border/50 rounded-md transition-all duration-200"
                   >
                     {tech.trim()}
                   </motion.span>

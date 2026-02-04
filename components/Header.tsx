@@ -1,45 +1,48 @@
 "use client";
 import Link from "next/link";
-import React, { forwardRef, useRef } from "react";
+import React from "react";
 import Nav from "./Nav";
-import MobiNav from "./MobiNav";
+import { ThemeToggle } from "./ThemeToggle";
+import { TimeZoneDisplay } from "./TimeZoneDisplay";
 
-type ChildComponentProps = {
-  Connect: () => void;
-  ProjectScroll: () => void;
-};
 const Header = () => {
   return (
-    <div
-      className="p-2
-    "
-    >
+    <div className="p-2">
       <div className="flex justify-between items-center">
-        <Link href={"#"}>
-          <p className="text-4xl ">
+        <Link href={"#"} className="group">
+          <p className="text-4xl font-medium transition-transform duration-200 group-hover:scale-105">
             Hemant{" "}
-            <span className="text-accent text-red-900 rounded-lg">.</span>
+            <span className="text-red-600 dark:text-red-500 rounded-lg transition-colors">.</span>
           </p>
         </Link>
 
         {/* desktop nav */}
-        <div className="hidden xl:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-4">
+          <TimeZoneDisplay />
           <Nav />
+          <ThemeToggle />
           <div>
-            <div className="border border-red-800 hover:bg-red-700 hover:transition hover:scale-110 delay-300 duration-300 ease-in-out py-1 px-6">
-              <Link href={"https://www.linkedin.com/in/hemant-prajapatii/"}>
-                {" "}
+            <div className="border border-red-700/50 hover:border-red-600 hover:bg-red-600/10 
+                           dark:border-red-800 dark:hover:bg-red-700/20
+                           transition-all duration-300 py-1.5 px-6 rounded-md">
+              <Link
+                href={"https://www.linkedin.com/in/hemant-prajapatii/"}
+                className="text-foreground hover:text-red-600 dark:hover:text-red-400 transition-colors"
+              >
                 Hire Me
               </Link>
             </div>
           </div>
         </div>
 
-
-
+        {/* mobile controls */}
+        <div className="flex xl:hidden items-center gap-3">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Header;
+

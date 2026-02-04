@@ -69,7 +69,7 @@ const Skills = () => {
                           className="object-contain max-w-full max-h-full transition-transform duration-300"
                         />
                       </div>
-                      <p className="text-center font-semibold text-sm text-gray-700">
+                      <p className="text-center font-semibold text-sm text-foreground">
                         {el.name}
                       </p>
                     </div>

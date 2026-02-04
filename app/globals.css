@@ -30,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -62,9 +63,20 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-[#1c1c22] text-white leading-loose;
+    @apply bg-background text-foreground leading-loose;
     font-family: var(--font-geist), system-ui, -apple-system, sans-serif;
+  }
+
+  /* Better focus states for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -78,6 +90,7 @@
     opacity: 0.2;
     filter: blur(5px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0px);
