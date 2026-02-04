@@ -8,7 +8,6 @@ export async function GET() {
     const UMAMI_URL = process.env.UMAMI_URL;
     const WEBSITE_ID = process.env.UMAMI_WEBSITE_ID;
     const API_TOKEN = process.env.UMAMI_API_TOKEN;
-console.log(UMAMI_URL,WEBSITE_ID,API_TOKEN)
     if (!UMAMI_URL || !WEBSITE_ID || !API_TOKEN) {
       return NextResponse.json(
         { error: 'Missing Umami environment variables' },
