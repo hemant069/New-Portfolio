@@ -67,14 +67,14 @@ const VisitorCounter = () => {
                     'Loading visitors...'
                 ) : (
                     <>
-                        You are the{' '}
+
                         <span className="font-semibold text-gray-100">
                             {formatNumber(stats?.visitors ?? 0)}
                             <sup className="text-xs">
                                 {getOrdinal(stats?.visitors ?? 0)}
                             </sup>
                         </span>{' '}
-                        visitor
+                        visitors
                     </>
                 )}
             </span>
