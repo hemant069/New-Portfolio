@@ -27,27 +27,27 @@ export function TimeZoneDisplay() {
         };
 
         updateTime();
-        // Update every minute instead of every second to avoid glitching
         const timer = setInterval(updateTime, 60000);
         return () => clearInterval(timer);
     }, []);
 
     if (!mounted) {
         return (
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted/50">
-                <Clock className="w-3.5 h-3.5 text-muted-foreground" />
-                <span className="text-sm font-mono text-muted-foreground">--:--</span>
+            <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-muted/50">
+                <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-muted-foreground" />
+                <span className="text-xs sm:text-sm font-mono text-muted-foreground">--:--</span>
             </div>
         );
     }
 
     return (
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted/30 border border-border/30">
-            <Clock className="w-3.5 h-3.5 text-muted-foreground" />
-            <span className="text-sm font-mono tabular-nums text-foreground font-medium">
+        <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-muted/30 border border-border/30">
+            <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-muted-foreground" />
+            <span className="text-xs sm:text-sm font-mono tabular-nums text-foreground font-medium">
                 {time}
             </span>
-            <span className="text-xs text-muted-foreground hidden sm:inline">
+            {/* Show timezone abbreviation on tablet, full on desktop */}
+            <span className="text-[10px] sm:text-xs text-muted-foreground hidden md:inline">
                 • {timezone}
             </span>
         </div>

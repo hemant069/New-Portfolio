@@ -21,13 +21,13 @@ const WorkExperience = () => {
                     {companies.map((item, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
                             <AccordionTrigger className="hover:no-underline">
-                                <div className='flex justify-between items-center w-full pr-4'>
+                                <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:pr-4 gap-1 sm:gap-0'>
                                     <div className='text-left'>
-                                        <h1 className='text-lg font-semibold'>{item.name}</h1>
-                                        <p className='text-sm text-muted-foreground'>{item.role}</p>
+                                        <h1 className='text-base sm:text-lg font-semibold'>{item.name}</h1>
+                                        <p className='text-xs sm:text-sm text-muted-foreground'>{item.role}</p>
                                     </div>
-                                    <div className='text-right'>
-                                        <p className='text-sm font-medium text-foreground'>{item.joinning_date} - {item.end_date}</p>
+                                    <div className='text-left sm:text-right'>
+                                        <p className='text-xs sm:text-sm font-medium text-foreground'>{item.joinning_date} - {item.end_date}</p>
                                         <p className='text-xs text-muted-foreground'>{item.location}</p>
                                     </div>
                                 </div>
@@ -39,8 +39,8 @@ const WorkExperience = () => {
                                             {desc}
                                         </p>
                                     ))}
-                                    <div className='pt-2 flex gap-2 items-center'>
-                                        <p className='text-sm '>Technologies & Tools</p>
+                                    <div className='pt-2 flex flex-wrap gap-2 items-center'>
+                                        <p className='text-xs sm:text-sm text-foreground'>Technologies & Tools</p>
                                         {
                                             item.tools.map((item, index) => <div key={index}>
                                                 <Image

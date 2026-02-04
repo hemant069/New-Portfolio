@@ -29,8 +29,8 @@ export function Contact() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex mt-4 items-center">
-        <p className="text-xl text-foreground">Let's Build Something Awesome Together! </p>
+      <div className="flex mt-4 items-center gap-2">
+        <p className="text-lg sm:text-xl text-foreground">Let's Build Something Awesome Together!</p>
         <motion.p
           className="text-3xl"
           animate={{ y: [0, -8, 0] }}
@@ -45,8 +45,8 @@ export function Contact() {
       </div>
 
       {/* Social list with hover previews */}
-      <div className="mt-4 lg:flex justify-between">
-        <div className="flex gap-2">
+      <div className="mt-4 flex flex-col sm:flex-row sm:justify-between gap-4">
+        <div className="flex flex-wrap gap-2">
           <TooltipProvider delayDuration={0}>
             {socialLinks.map((link, index) => {
               const Icon = link.icon;
@@ -91,7 +91,7 @@ export function Contact() {
             })}
           </TooltipProvider>
         </div>
-        <div className="flex justify-center mt-4 lg:mt-0">
+        <div className="flex justify-start sm:justify-center">
           <VisitorCounter />
         </div>
       </div>

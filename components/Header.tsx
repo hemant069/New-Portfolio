@@ -10,13 +10,13 @@ const Header = () => {
     <div className="p-2">
       <div className="flex justify-between items-center">
         <Link href={"#"} className="group">
-          <p className="text-4xl font-medium transition-transform duration-200 group-hover:scale-105">
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-medium transition-transform duration-200 group-hover:scale-105">
             Hemant{" "}
             <span className="text-red-600 dark:text-red-500 rounded-lg transition-colors">.</span>
           </p>
         </Link>
 
-        {/* desktop nav */}
+        {/* Desktop nav - xl and above */}
         <div className="hidden xl:flex items-center gap-4">
           <TimeZoneDisplay />
           <Nav />
@@ -35,8 +35,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* mobile controls */}
-        <div className="flex xl:hidden items-center gap-3">
+        {/* Tablet/Mobile controls */}
+        <div className="flex xl:hidden items-center gap-2 sm:gap-3">
+          <TimeZoneDisplay />
           <ThemeToggle />
         </div>
       </div>
@@ -45,4 +46,3 @@ const Header = () => {
 };
 
 export default Header;
-

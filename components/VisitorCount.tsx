@@ -68,7 +68,7 @@ const VisitorCounter = () => {
                 ) : (
                     <>
 
-                        <span className="font-semibold text-gray-100">
+                        <span className="font-semibold dark:text-gray-200 text-gray-700">
                             {formatNumber(stats?.visitors ?? 0)}
                             <sup className="text-xs">
                                 {getOrdinal(stats?.visitors ?? 0)}
