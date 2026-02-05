@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hemantprajapati.dev",
+    url: "https://hemant-port.vercel.app/",
     siteName: "Hemant Prajapati Portfolio",
     title: "Hemant Prajapati | Software Developer & Full-Stack Engineer",
     description:
       "I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png",
         width: 1200,
         height: 630,
         alt: "Hemant Prajapati - Software Developer",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Hemant Prajapati | Software Developer",
     description:
       "Full-Stack Developer building modern web applications with React, Next.js, and AI.",
-    images: ["/og-image.png"],
+    images: ["https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png"],
   },
   robots: {
     index: true,

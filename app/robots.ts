@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://hemantprajapati.dev/sitemap.xml',
+        sitemap: 'https://hemant-port.vercel.app/sitemap.xml',
     }
 }
