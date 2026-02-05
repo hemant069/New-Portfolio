@@ -11,6 +11,7 @@ import {
 import { socialLinks } from '@/data/socialLinks';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import BlueTick from './ui/bluetick';
 
 const Hero = () => {
     return (
@@ -71,7 +72,13 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
                 <div className='text-start'>
-                    <h1 className='text-xl sm:text-2xl lg:text-2xl italic font-bold text-foreground'>Hemant Prajapati</h1>
+                    <div className='flex items-center gap-2 dark:overflow-hidden'>
+                        <h1 className='relative inline-block  text-xl sm:text-2xl lg:text-2xl italic font-semibold text-foreground'>
+                            Hemant Prajapati
+                            <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent dark:via-white/10 -skew-x-12 animate-glass-flash pointer-events-none" />
+                        </h1>
+                        <BlueTick />
+                    </div>
                     <p className='text-xs sm:text-sm text-muted-foreground'>Engineer | Software Developer</p>
                 </div>
 
@@ -110,10 +117,10 @@ const Hero = () => {
                         })}
                     </TooltipProvider>
                 </div>
-            </motion.div>
+            </motion.div >
 
             {/* Bio */}
-            <motion.div
+            < motion.div
                 className='text-start mt-4 sm:mt-6'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -124,8 +131,8 @@ const Hero = () => {
                     I work across the entire development lifecycle. From UI/UX to deployment to user feedback,
                     I care less about technology debates and more about delivering results that people love using.
                 </p>
-            </motion.div>
-        </div>
+            </motion.div >
+        </div >
     )
 }
 

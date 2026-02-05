@@ -7,10 +7,15 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 const WorkExperience = () => {
     return (
-        <div className='w-full'>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className='w-full'>
             <div className='text-start'>
                 <h3 className='text-md text-muted-foreground mt-2'>Featured</h3>
                 <h1 className='text-xl font-semibold text-foreground'>Work Experience</h1>
@@ -59,7 +64,7 @@ const WorkExperience = () => {
                     ))}
                 </Accordion>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

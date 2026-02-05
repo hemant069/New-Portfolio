@@ -61,8 +61,16 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         rotate: "rotate 10s linear infinite",
+        "glass-flash": "glass-flash 3s infinite linear",
       },
       keyframes: {
+        "glass-flash": {
+          "0%": { left: "-100%" },
+          "25%": { left: "100%" },
+          "50%": { left: "100%" },
+          "75%": { left: "100%" },
+          "100%": { left: "100%" }, // Stay off screen for the rest
+        },
         flyAround: {
           "0%": {
             transform: "translate(-50%, -50%) rotate(0deg)",
