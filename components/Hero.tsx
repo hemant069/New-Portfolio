@@ -66,14 +66,14 @@ const Hero = () => {
 
             {/* Name and Social Links */}
             <motion.div
-                className='flex flex-col sm:flex-row mt-4 sm:mt-6 gap-4 sm:items-center sm:justify-between'
+                className='flex flex-col  sm:flex-row mt-4 sm:mt-6 gap-4 sm:items-center sm:justify-between'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 }}
             >
                 <div className='text-start'>
-                    <div className='flex items-center gap-2 dark:overflow-hidden'>
-                        <h1 className='relative inline-block  text-xl sm:text-2xl lg:text-2xl italic font-semibold text-foreground'>
+                    <div className='flex items-center gap-1'>
+                        <h1 className='relative inline-block dark:overflow-hidden w-[11rem] sm:w-[13rem] text-xl sm:text-2xl lg:text-2xl italic font-semibold text-foreground'>
                             Hemant Prajapati
                             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent dark:via-white/10 -skew-x-12 animate-glass-flash pointer-events-none" />
                         </h1>
