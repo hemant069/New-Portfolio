@@ -16,7 +16,7 @@ import BlueTick from './ui/bluetick';
 const Hero = () => {
     return (
         <div>
-            {/* Banner Section */}
+
             <motion.div
                 className="w-full"
                 initial={{ opacity: 0, y: 20 }}
