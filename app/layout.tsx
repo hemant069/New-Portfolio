@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${Geistfont.className} antialiased`}>
+      <body suppressHydrationWarning className={`${Geistfont.className} antialiased`}>
         <ThemeProvider>
           {process.env.NODE_ENV === "production" && <UmamiAnalytics />}
           <Oneko />

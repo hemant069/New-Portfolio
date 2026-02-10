@@ -1,10 +1,12 @@
 import { companiesTypes } from "@/types/companiesTypes";
-import React from "../public/skills/react.svg";
-import Css from "../public/skills/css.svg";
-import Javascript from "../public/skills/javascript.svg";
-import tailwind from "../public/skills/tailwind.svg";
-import MongoDb from "../public/skills/mongoDB.svg";
-import NextJs from "../public/skills/nextJS.svg";
+import ReactIcon from "../components/icons/react"
+import NextJsIcon from "../components/icons/nextjs"
+import JavascriptIcon from "../components/icons/javascript"
+import TailwindIcon from "../components/icons/tailwind"
+import CssIcon from "../components/icons/css"
+import MongoDbIcon from "../components/icons/mongodb"
+import ExpressIcon from "../components/icons/express"
+import PrismaIcon from "../components/icons/prisma"
 
 export const companies: companiesTypes[] = [
   {
@@ -20,7 +22,7 @@ export const companies: companiesTypes[] = [
       "Designed, developed, and deployed a backend for a Chatbot solution that switches between various internal APIs using different NLU intents.",
     ],
     status: true,
-    tools: [React, NextJs, Javascript, tailwind, Css, MongoDb],
+    tools: [ReactIcon, NextJsIcon, JavascriptIcon, TailwindIcon, CssIcon, MongoDbIcon],
   },
   {
     name: "Masai labs",
@@ -35,6 +37,6 @@ export const companies: companiesTypes[] = [
       "Utilized React and react-chartjs to implement an analytics view, providing administrators with visually insightful data to drive informed decision-making.",
     ],
     status: false,
-    tools: [React, NextJs, Javascript],
+    tools: [ReactIcon, NextJsIcon, JavascriptIcon],
   },
 ];

@@ -6,7 +6,7 @@ export interface companiesTypes {
   end_date: string;
   role: string;
   location: string;
-  tools: StaticImageData[];
+  tools: React.ComponentType[];
   description: string[];
   status: boolean;
 }

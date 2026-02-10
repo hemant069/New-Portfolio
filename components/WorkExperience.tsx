@@ -7,7 +7,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from 'next/image'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 const WorkExperience = () => {
     return (
@@ -47,14 +47,8 @@ const WorkExperience = () => {
                                     <div className='pt-2 flex flex-wrap gap-2 items-center'>
                                         <p className='text-xs sm:text-sm text-foreground'>Technologies & Tools</p>
                                         {
-                                            item.tools.map((item, index) => <div key={index}>
-                                                <Image
-                                                    src={item}
-                                                    width={30}
-                                                    height={30}
-                                                    alt={`item-${index}`}
-                                                    className='w-5'
-                                                />
+                                            item.tools.map((Icon, index) => <div key={index} className="w-5 h-5">
+                                                <Icon />
                                             </div>)
                                         }
                                     </div>
