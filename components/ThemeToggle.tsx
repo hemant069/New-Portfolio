@@ -2,20 +2,23 @@
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSound } from "../custom-hooks/useSound";
 
+// For files in public/sound, reference them by URL path directly
+const clickSoundUrl = "/sound/click.mp3";
 function applyThemeTransition() {
-    if (typeof window === "undefined") return;
+  if (typeof window === "undefined") return;
 
-    const id = "theme-clip-transition";
-    let style = document.getElementById(id) as HTMLStyleElement | null;
+  const id = "theme-clip-transition";
+  let style = document.getElementById(id) as HTMLStyleElement | null;
 
-    if (!style) {
-        style = document.createElement("style");
-        style.id = id;
-        document.head.appendChild(style);
-    }
+  if (!style) {
+    style = document.createElement("style");
+    style.id = id;
+    document.head.appendChild(style);
+  }
 
-    style.textContent = `
+  style.textContent = `
     ::view-transition-group(root) {
       animation-duration: 2s;
       animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,47 +50,49 @@ function applyThemeTransition() {
 }
 
 export function ThemeToggle() {
-    const { resolvedTheme, setTheme } = useTheme();
-    const isDark = resolvedTheme === "dark";
-    const Icon = isDark ? Moon : Sun;
+  const { resolvedTheme, setTheme } = useTheme();
+  const { playSound } = useSound(clickSoundUrl);
+  const isDark = resolvedTheme === "dark";
+  const Icon = isDark ? Moon : Sun;
 
-    const handleToggle = () => {
-        applyThemeTransition();
+  const handleToggle = () => {
+    applyThemeTransition();
 
-        const switchTheme = () => {
-            setTheme(isDark ? "light" : "dark");
-        };
-
-        if (!document.startViewTransition) {
-            switchTheme();
-            return;
-        }
-
-        document.startViewTransition(switchTheme);
+    const switchTheme = () => {
+      playSound()
+      setTheme(isDark ? "light" : "dark");
     };
 
-    return (
-        <motion.button
-            onClick={handleToggle}
-            className="relative flex items-center justify-center w-9 h-9 rounded-lg
+    if (!document.startViewTransition) {
+      switchTheme();
+      return;
+    }
+
+    document.startViewTransition(switchTheme);
+  };
+
+  return (
+    <motion.button
+      onClick={handleToggle}
+      className="relative flex items-center justify-center w-9 h-9 rounded-lg
         bg-secondary/50 hover:bg-secondary/80
         border border-border/50 hover:border-border
         transition-colors duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Toggle theme"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      aria-label="Toggle theme"
+    >
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={isDark ? "dark" : "light"}
+          initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+          animate={{ opacity: 1, rotate: 0, scale: 1 }}
+          exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+          transition={{ duration: 0.15 }}
         >
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={isDark ? "dark" : "light"}
-                    initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
-                    animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                    exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
-                    transition={{ duration: 0.15 }}
-                >
-                    <Icon className="w-4 h-4" />
-                </motion.div>
-            </AnimatePresence>
-        </motion.button>
-    );
+          <Icon className="w-4 h-4" />
+        </motion.div>
+      </AnimatePresence>
+    </motion.button>
+  );
 }
