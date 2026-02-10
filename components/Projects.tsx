@@ -1,7 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { ProjectDetails } from "@/data/projectData";
 import { projectTypes } from "@/types/projectTypes";
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 
 
 

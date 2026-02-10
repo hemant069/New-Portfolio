@@ -18,7 +18,7 @@ export const ProjectDetails: projectTypes[] = [
     live_link: "https://mindverse-phi.vercel.app/",
     github_link: "https://github.com/hemant069/BlogApp",
     img: mindverse,
-    
+
   },
   {
     id: 2,
