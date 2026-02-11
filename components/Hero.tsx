@@ -127,9 +127,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
             >
                 <p className='text-sm sm:text-base leading-6 sm:leading-7 text-muted-foreground'>
-                    I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences,
-                    I work across the entire development lifecycle. From UI/UX to deployment to user feedback,
-                    I care less about technology debates and more about delivering results that people love using.
+                    I build products from the ground up using React.js, Next.js, JavaScript, Node.js, Express.js, MongoDB, and Prisma. Whether it’s crafting responsive frontends, architecting scalable backend systems, or developing full-stack and AI-powered applications, I work across the entire development lifecycle. From intuitive UI/UX design to API development, database modeling, deployment, and continuous improvement based on user feedback, I focus less on technology debates and more on building performant, scalable solutions that people genuinely enjoy using.
                 </p>
             </motion.div >
         </div >
