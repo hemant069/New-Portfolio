@@ -4,11 +4,22 @@ import frazzo from "../public/Projects/Frazzo.png";
 import baazaar from "../public/Projects/baazarcart.png";
 import gitcard from "../public/Projects/gitcard.png";
 import mindverse from "../public/Projects/mindverse.png";
+import portfolio from "../public/Projects/portfolio.png";
 // import baazarvideo from "video/baazarCart.mp4";
 // import instagramvideo from "video/instagram.mp4";
 const baazarvideo = "video/baazarCart.mp4";
 const instagramvideo = "video/instagram.mp4";
 export const ProjectDetails: projectTypes[] = [
+  {
+    id: 0,
+    name: "Portfolio",
+    description: "My portfolio website which is built using next js and tailwind css motion react and typescript ",
+    tech: "Next.js, Tailwind CSS, TypeScript, React.js, motion-react",
+    live_link: "https://hemant-port.vercel.app/",
+    github_link: "https://github.com/hemant069/New-Portfolio",
+    img: portfolio,
+    video: "",
+  },
   {
     id: 1,
     name: "MindVerse",
