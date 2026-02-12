@@ -22,7 +22,7 @@ export const companies: companiesTypes[] = [
       "Designed, developed, and deployed a backend for a Chatbot solution that switches between various internal APIs using different NLU intents.",
     ],
     status: true,
-    tools: [ReactIcon, NextJsIcon, JavascriptIcon, TailwindIcon, CssIcon, MongoDbIcon],
+   tools:[{id:1,name:"React",icon:ReactIcon},{id:2,name:"Next.js",icon:NextJsIcon},{id:3,name:"JavaScript",icon:JavascriptIcon},{id:4,name:"Tailwind",icon:TailwindIcon},{id:5,name:"CSS",icon:CssIcon},{id:8,name:"Prisma",icon:PrismaIcon}]
   },
   {
     name: "Masai labs",
@@ -37,6 +37,6 @@ export const companies: companiesTypes[] = [
       "Utilized React and react-chartjs to implement an analytics view, providing administrators with visually insightful data to drive informed decision-making.",
     ],
     status: false,
-    tools: [ReactIcon, NextJsIcon, JavascriptIcon],
+    tools:[{id:1,name:"React",icon:ReactIcon},{id:2,name:"Next.js",icon:NextJsIcon},{id:3,name:"JavaScript",icon:JavascriptIcon}]
   },
 ];

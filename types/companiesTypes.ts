@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { skillTypes } from "./projectTypes";
 
 export interface companiesTypes {
   name: string;
@@ -6,7 +7,7 @@ export interface companiesTypes {
   end_date: string;
   role: string;
   location: string;
-  tools: React.ComponentType[];
+  tools: skillTypes[]
   description: string[];
   status: boolean;
 }

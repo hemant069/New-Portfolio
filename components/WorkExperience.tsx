@@ -47,8 +47,9 @@ const WorkExperience = () => {
                                     <div className='pt-2 flex flex-wrap gap-2 items-center'>
                                         <p className='text-xs sm:text-sm text-foreground'>Technologies & Tools</p>
                                         {
-                                            item.tools.map((Icon, index) => <div key={index} className="w-5 h-5">
-                                                <Icon />
+                                            item.tools.map((item, index) => <div key={index} className="flex items-center gap-1">
+                                                <div className='w-5 h-5'> <item.icon /></div>
+                                                <div className='text-xs sm:text-sm text-foreground'>{item.name}</div>
                                             </div>)
                                         }
                                     </div>
