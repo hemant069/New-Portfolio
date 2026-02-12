@@ -127,7 +127,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
             >
                 <p className='text-sm sm:text-base leading-6 sm:leading-7 text-muted-foreground'>
-                    I build products from the ground up using React.js, Next.js, JavaScript, Node.js, Express.js, MongoDB, and Prisma. Whether it’s crafting responsive frontends, architecting scalable backend systems, or developing full-stack and AI-powered applications, I work across the entire development lifecycle. From intuitive UI/UX design to API development, database modeling, deployment, and continuous improvement based on user feedback, I focus less on technology debates and more on building performant, scalable solutions that people genuinely enjoy using.
+                    I build scalable products using React.js, Next.js, JavaScript, Node.js, Express.js, MongoDB, and Prisma. From frontend to backend and full-stack development, I handle everything from UI/UX to deployment, focusing on performance and delivering solutions users love.
                 </p>
             </motion.div >
         </div >

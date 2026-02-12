@@ -7,7 +7,7 @@ import {
 import Image from "next/image";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 import Link from "next/link";
-import { projectTypes } from "@/types/projectTypes";
+import { projectTypes, skillTypes } from "@/types/projectTypes";
 import { Github, Globe, Play, Video } from "lucide-react";
 import { motion } from "framer-motion";
 import VideoComponent from "./ui/VideoComponent";
@@ -186,9 +186,9 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
 
               {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-                {data?.tech?.split(",").map((tech, i) => (
-                  <motion.span
-                    key={i}
+                {data?.tech?.map((tech: skillTypes, i) => (
+                  <motion.div
+                    key={tech.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: (index || 0) * 0.03 + i * 0.03 }}
@@ -196,10 +196,13 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       scale: 1.05,
                       backgroundColor: "rgba(255, 255, 255, 0.1)"
                     }}
-                    className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-muted-foreground bg-muted/50 border border-border/50 rounded-md transition-all duration-200"
+                    className="px-2 flex items-center gap-1 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-muted-foreground bg-muted/50 border border-border/50 rounded-md transition-all duration-200"
                   >
-                    {tech.trim()}
-                  </motion.span>
+                    {tech.icon && <div className="w-5 h-5"><tech.icon /></div>}
+                    {tech.name}
+
+
+                  </motion.div>
                 ))}
               </div>
             </div>
