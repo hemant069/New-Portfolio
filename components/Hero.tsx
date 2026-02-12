@@ -127,7 +127,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
             >
                 <p className='text-sm sm:text-base leading-6 sm:leading-7 text-muted-foreground'>
-                    I build scalable products using React.js, Next.js, JavaScript, Node.js, Express.js, MongoDB, and Prisma. From frontend to backend and full-stack development, I handle everything from UI/UX to deployment, focusing on performance and delivering solutions users love.
+                    I build scalable products using <span className='font-semibold font-mono'>React.js, Next.js, JavaScript, Node.js, Express.js, MongoDB, and Prisma.</span> From frontend to backend and full-stack development, I handle everything from UI/UX to deployment, focusing on performance and delivering solutions users love.
                 </p>
             </motion.div >
         </div >
