@@ -64,6 +64,25 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Hemant Prajapati",
+  url: "https://hemant-port.vercel.app/",
+  image: "https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png",
+  jobTitle: "Full Stack Developer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Freelance"
+  },
+  sameAs: [
+    "https://linkedin.com/in/hemant-prajapatii",
+    "https://github.com/hemant069",
+    "https://x.com/hemant069"
+  ]
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,7 +90,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="AYB9VEKLwESlSCH8mrHaL2P52FaHBZwVzRRomDup9Nc" />
+      </head>
       <body suppressHydrationWarning className={`${Geistfont.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <ThemeProvider>
           {process.env.NODE_ENV === "production" && <UmamiAnalytics />}
           <Oneko />
