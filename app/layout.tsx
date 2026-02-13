@@ -78,7 +78,7 @@ const structuredData = {
   sameAs: [
     "https://linkedin.com/in/hemant-prajapatii",
     "https://github.com/hemant069",
-    "https://x.com/hemant069"
+    "https://x.com/Hemantp7860"
   ]
 };
 
