@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import myimg from "../public/my_ai_img-removebg-preview (1).png";
-import moon from "../public/moon.jpg";
+import moon from "../public/banner/moon.jpg";
 import {
     Tooltip,
     TooltipContent,

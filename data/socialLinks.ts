@@ -1,11 +1,11 @@
 import { SocialLink } from "@/types/socialTypes";
 import { Github, Instagram, Linkedin, Mail, Twitter, NotebookTabs } from "lucide-react";
-import githubPreview from "../public/github-preview.webp";
-import linkedinPreview from "../public/linkedin-preview.webp";
-import twitterPreview from "../public/twitter-preview.webp";
-import instagramPreview from "../public/instagram.png";
-import MailPreview from "../public/mailpreview.png";
-import Resume from "../public/resume.png"
+import githubPreview from "../public/preview-images/github-preview.webp";
+import linkedinPreview from "../public/preview-images/linkedin-preview.webp";
+import twitterPreview from "../public/preview-images/twitter-preview.webp";
+import instagramPreview from "../public/preview-images/instagram.png";
+import MailPreview from "../public/preview-images/mailpreview.png";
+import Resume from "../public/preview-images/resume.png"
 
 export const socialLinks: SocialLink[] = [
   {
