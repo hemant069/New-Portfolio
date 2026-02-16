@@ -13,7 +13,7 @@ const Booking = () => {
     }, [])
 
     return (
-        <div className=' mt-4 p-[2rem] ring-1 ring-gray-200 dark:ring-gray-800   dark:border-gray-800 rounded-lg  '>
+        <div className=' mt-4 p-[2rem] ring-1  ring-gray-200 inset-shadow-sm  dark:ring-gray-800   dark:border-gray-800 rounded-lg  '>
             <p className='text-center text-xl font-bold mb-4'>So you want to work with me ?</p>
             <div className='flex items-center justify-center '>
                 <Button
