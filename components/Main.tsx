@@ -4,11 +4,12 @@ import { Contact } from "./Contact";
 import Hero from "./Hero";
 import WorkExperience from "./WorkExperience";
 import Github from "./Github";
+import Booking from "./cal/Booking";
 
 
 const Main = () => {
 
-  // <script defer src="https://cloud.umami.is/script.js" data-website-id="b6242faa-29d0-49f4-9a44-73c9ec94be8e"></script>
+
   return (
     <div>
 
@@ -16,6 +17,7 @@ const Main = () => {
       <WorkExperience />
       <Projects />
       <Github />
+      <Booking />
       <Contact />
 
     </div>
