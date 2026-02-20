@@ -5,7 +5,7 @@ import "./globals.css";
 import Oneko from "@/components/Oneko";
 import UmamiAnalytics from "@/components/Umami";
 import { ThemeProvider } from "@/components/providers";
-
+import { Analytics } from "@vercel/analytics/next"
 const Geistfont = Geist({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600"],
@@ -99,6 +99,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <ThemeProvider>
+          <Analytics />
           {process.env.NODE_ENV === "production" && <UmamiAnalytics />}
           <Oneko />
           {children}
