@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "I build from zero. Whether it's frontend, backend, full-stack applications, or AI-powered experiences.",
     images: [
       {
-        url: "https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png",
+        url: "https://hemantbytes.me/my_ai_img-removebg-preview (1).png",
         width: 1200,
         height: 630,
         alt: "Hemant Prajapati - Software Developer",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Hemant Prajapati | Software Developer",
     description:
       "Full-Stack Developer building modern web applications with React, Next.js, and AI.",
-    images: ["https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png"],
+    images: ["https://hemantbytes.me/my_ai_img-removebg-preview (1).png"],
   },
   robots: {
     index: true,
@@ -68,7 +68,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Hemant Prajapati",
-  url: "https://hemant-port.vercel.app/",
+  url: "https://hemantbytes.me",
   image: "https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png",
   jobTitle: "Full Stack Developer",
   worksFor: {
