@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hemant-port.vercel.app/",
+    url: "https://hemantbytes.me",
     siteName: "Hemant Prajapati Portfolio",
     title: "Hemant Prajapati | Software Developer & Full-Stack Engineer",
     description:
@@ -69,7 +69,7 @@ const structuredData = {
   "@type": "Person",
   name: "Hemant Prajapati",
   url: "https://hemantbytes.me",
-  image: "https://hemant-port.vercel.app/my_ai_img-removebg-preview (1).png",
+  image: "https://hemantbytes.me/my_ai_img-removebg-preview (1).png",
   jobTitle: "Full Stack Developer",
   worksFor: {
     "@type": "Organization",
