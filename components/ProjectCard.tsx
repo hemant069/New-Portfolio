@@ -29,7 +29,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
           className="animate-rotate rounded-sm absolute inset-0 h-full w-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
         ></div>
         <Card
-          className="border-none rounded-none relative   sm:h-full md:h-[500px] lg:h-full z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" onMouseEnter={() => setIsHovered(true)}
+          className="border border-border  rounded-sm relative   sm:h-full md:h-[500px] lg:h-full z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
 
