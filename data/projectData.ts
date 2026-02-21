@@ -5,8 +5,6 @@ import baazaar from "../public/Projects/baazarcart.png";
 import gitcard from "../public/Projects/gitcard.png";
 import mindverse from "../public/Projects/mindverse.png";
 import portfolio from "../public/Projects/portfolio.png";
-// import baazarvideo from "video/baazarCart.mp4";
-// import instagramvideo from "video/instagram.mp4";
 const baazarvideo = "video/baazarCart.mp4";
 const instagramvideo = "video/instagram.mp4";
 import NextJs from "@/components/icons/nextjs";
@@ -65,7 +63,7 @@ export const ProjectDetails: projectTypes[] = [
     id: 1,
     name: "MindVerse",
     description:
-      "Mindverse is place where people can share their throught and stories.",
+      "MindVerse is a modern blogging platform where writers and thinkers connect. Create, share, and discover stories that matter. Join our community of creators today.",
     tech: [
       {
         id: 0,

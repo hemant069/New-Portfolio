@@ -7,10 +7,13 @@ import CssIcon from "../components/icons/css"
 import MongoDbIcon from "../components/icons/mongodb"
 import ExpressIcon from "../components/icons/express"
 import PrismaIcon from "../components/icons/prisma"
+import masai from "../public/masaischool_logo.jpg"
+import baaz from "../public/baazlive_logo.jpg"
 
 export const companies: companiesTypes[] = [
   {
     name: "Baaz",
+    image:baaz,
     joinning_date: "March 2024",
     end_date: "Present",
     role: "Frontend Engineer",
@@ -26,6 +29,7 @@ export const companies: companiesTypes[] = [
   },
   {
     name: "Masai labs",
+    image:masai,
     joinning_date: "Feburary 2023",
     end_date: "December 2023",
     role: "Full stack developer",

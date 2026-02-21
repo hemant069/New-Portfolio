@@ -3,6 +3,7 @@ import { skillTypes } from "./projectTypes";
 
 export interface companiesTypes {
   name: string;
+  image:StaticImageData;
   joinning_date: string;
   end_date: string;
   role: string;
