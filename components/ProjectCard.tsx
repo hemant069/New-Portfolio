@@ -22,19 +22,18 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: (index || 0) * 0.1 }}
       whileHover={{ y: -4 }}
-      className="  w-full "
+      className="w-full h-full"
     >
-      <div className="border border-border p-[0.98] rounded-sm relative z-10 overflow-hidden">
+      <div className="border border-border p-[0.98] rounded-sm relative z-10 overflow-hidden h-full flex flex-col">
         <div
           className="animate-rotate rounded-sm absolute inset-0 h-full w-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
         ></div>
         <Card
-          className="border-none rounded-none h-full relative z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
-          onMouseEnter={() => setIsHovered(true)}
+          className="border-none rounded-none relative   sm:h-full md:h-[500px] lg:h-full z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
 
-          <CardContent className="p-0  flex flex-col   ">
+          <CardContent className="p-0 flex flex-col flex-1">
             {/* Image Container */}
             <div className="relative ">
               <motion.div
@@ -45,7 +44,7 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                 <Image
                   src={data.img}
                   width={400}
-                  height={250}
+                  height={200}
 
                   className="w-full  object-cover rounded-lg h-40 sm:h-44 md:h-48 lg:h-52 "
                   alt={`${data.name} project image`}
@@ -180,12 +179,12 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
               </div>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-2 sm:line-clamp-3 flex-1">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-2 sm:line-clamp-3">
                 {data.description}
               </p>
 
               {/* Tech Stack Tags */}
-              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
+              <div className=" grid grid-cols-3 gap-1.5 sm:gap-2">
                 {data?.tech?.map((tech: skillTypes, i) => (
                   <motion.div
                     key={tech.id}
@@ -196,10 +195,10 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
                       scale: 1.05,
                       backgroundColor: "rgba(255, 255, 255, 0.1)"
                     }}
-                    className="px-2 flex items-center gap-1 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs text-muted-foreground bg-muted/50 border border-border/50 rounded-md transition-all duration-200"
+                    className=" flex items-center gap-1 sm:px-2.5 py-0.5 sm:py-1 text-xs sm:text-xs text-muted-foreground bg-muted/50 border border-border/50 rounded-md transition-all duration-200"
                   >
                     {tech.icon && <div className="w-5 h-5"><tech.icon /></div>}
-                    {tech.name}
+                    <p className='break-words'>{tech.name}</p>
 
 
                   </motion.div>

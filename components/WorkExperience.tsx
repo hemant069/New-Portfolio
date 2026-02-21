@@ -27,12 +27,16 @@ const WorkExperience = () => {
                         <AccordionItem key={index} value={`item-${index}`}>
                             <AccordionTrigger className="hover:no-underline">
                                 <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:pr-4 gap-1 sm:gap-0'>
-                                    <div className='text-left'>
-                                        <div className='flex items-center gap-2'>
+                                    <div className='flex items-center gap-2'>
+                                        <div>
                                             <Image src={item.image} alt={item.name} width={50} height={50} className='w-10 h-10 ring-1 ring-gray-500 rounded-lg ' />
-                                            <h1 className='text-base sm:text-lg font-semibold '>{item.name}</h1>
                                         </div>
-                                        <p className='text-xs sm:text-sm text-muted-foreground mt-1'>{item.role}</p>
+                                        <div className='text-left'>
+                                            <h1 className='text-base sm:text-lg font-semibold '>{item.name}</h1>
+                                            <p className='text-xs sm:text-sm text-muted-foreground mt-1'>{item.role}</p>
+                                        </div>
+
+
                                     </div>
                                     <div className='text-left sm:text-right'>
                                         <p className='text-xs sm:text-sm font-medium text-foreground'>{item.joinning_date} - {item.end_date}</p>
