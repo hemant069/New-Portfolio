@@ -26,11 +26,12 @@ const ProjectCard = ({ data, index }: { data: projectTypes; index?: number }) =>
     >
       <div className="border border-border p-[0.98] rounded-sm relative z-10 overflow-hidden h-full flex flex-col">
         <div
-          className="animate-rotate rounded-sm absolute inset-0 h-full w-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)]"
+          className="animate-rotate rounded-sm absolute inset-0 h-full w-full bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)] will-change-transform"
         ></div>
         <Card
-          className="border border-border  rounded-sm relative   sm:h-full md:h-[500px] lg:h-full z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          className="border border-border  rounded-sm relative   sm:h-full md:h-[500px] lg:h-full z-20 bg-card inset-shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+          onMouseEnter={() => { if (typeof window !== 'undefined' && window.innerWidth >= 640) setIsHovered(true); }}
+          onMouseLeave={() => { if (typeof window !== 'undefined' && window.innerWidth >= 640) setIsHovered(false); }}
         >
 
           <CardContent className="p-0 flex flex-col flex-1">
